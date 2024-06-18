@@ -1,0 +1,13 @@
+.page-container {
+  height: 100%;
+  margin: 0 auto;
+  width: $min-width-mobile;
+
+  @media (min-width: $min-width-tablet) {
+    width: $min-width-tablet;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: $min-width-desktop;
+  }
+}
