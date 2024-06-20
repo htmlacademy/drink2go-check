@@ -1,10 +1,248 @@
-// features
-// features__badge-advatages
+.features {
+  text-align: center;
+  padding: 50px 20px 26px;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 60px 30px 100px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 100px 40px 120px;
+  }
+}
+
+.features__badge-advatages {
+  margin-bottom: 5px;
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 18px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 4px;
+  }
+}
 // features__wrapper
-// features__list
-// features__item
-// features__title
-// features__advantages-discription
+.features__list {
+  padding: 0;
+  margin: 0;
+
+  @media (min-width: $min-width-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 30px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-height: 170px;
+  }
+}
+
+.features__item {
+  min-height: 140px;
+  list-style: none;
+  margin-bottom: 34px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (min-width: $min-width-tablet) {
+    max-width: 339px;
+    text-align: justify;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    max-width: 318px;
+    text-align: center;
+    justify-content: flex-end;
+  }
+}
+
+.features__item--time {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 114px;
+    width: 52px;
+    height: 56px;
+    background-image: url("../../icons/time.svg");
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    &::after {
+      top: 3px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: 318px;
+
+    &::after {
+      top: 0;
+      left: 133px;
+    }
+  }
+}
+
+.features__item--comfortable {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 114px;
+    width: 52px;
+    height: 56px;
+    background-image: url("../../icons/comfortable.svg");
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    &::after {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: 317px;
+
+    &::after {
+      top: 0;
+      left: 133px;
+    }
+  }
+}
+
+.features__item--energy {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 114px;
+    width: 52px;
+    height: 56px;
+    background-image: url("../../icons/energy.svg");
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    &::after {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: 318px;
+
+    &::after {
+      top: 0;
+      left: 133px;
+    }
+  }
+}
+
+.features__item--eco {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -2px;
+    left: 114px;
+    width: 52px;
+    height: 56px;
+    background-image: url("../../icons/eco.svg");
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    &::after {
+      left: 0;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: 317px;
+
+    &::after {
+      top: 0;
+      left: 133px;
+    }
+  }
+}
+
+.features__title {
+  font-weight: 700;
+  margin: 0;
+  line-height: 20px;
+}
+
+.features__title--big {
+  margin-bottom: 37px;
+  font-size: 24px;
+  line-height: 36px;
+
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 59px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin-bottom: 80px;
+  }
+}
+
+.features__title--small {
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 5px;
+
+  @media (min-width: $min-width-tablet) {
+    margin: 0 0 10px 72px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin-left: 0;
+  }
+}
+
+.features__advantages-discription {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    max-width: 267px;
+    margin-left: 72px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    margin: 0;
+    max-width: 317px;
+  }
+}
+
+.features__advantages-discription--width {
+  max-width: 230px;
+}
+
 // features__button-filter
 // features__search-filter
 // features__search-sorting

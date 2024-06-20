@@ -1,21 +1,113 @@
 // footer
 // footer__container
-// footer__social
+
+.footer__social {
+  padding: 20px;
+  display: flex;
+}
+
 // footer__logo-image
-// footer__title
-// footer__social-list
-// footer__social-item
+.footer__title {
+  display: none;
+
+  @media (min-width: $min-width-desktop) {
+    display: block;
+  }
+}
+
+.footer__social-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+
+.footer__social-item {
+  padding: 9px;
+  gap: 20px;
+}
 // footer__social-link
 // footer__social-vk
 // footer__social-Pinterest
 // footer-social-odnoklassniki
-// footer__shop-links
-// footer__shop-title
-// footer__nav-list
-// footer__nav-item
-// footer__nav-link
-// footer__shop-media
-// footer__contacts
-// footer__contacts-address
-// footer__about-text
-// footer__contacts-address-phone
+.footer__shop-links {
+  padding: 20px;
+}
+
+.footer__shop-title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $base-primary;
+}
+
+.footer__nav-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.footer__nav-item {
+  margin: 8px 0;
+}
+
+.footer__nav-link {
+  text-decoration: none;
+  color: $base-black;
+}
+
+.footer__shop-media {
+  padding: 20px;
+}
+
+.footer__contacts {
+  padding: 20px;
+}
+
+.footer__contacts-address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-style: normal;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+.footer__about-text {
+  margin: 0;
+  margin-left: 19px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -19px;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../icons/address.svg");
+    color: $base-white;
+  }
+}
+
+.footer__contacts-address-phone {
+  margin: 0;
+  margin-left: 19px;
+  text-decoration: none;
+  color: $base-black;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -19px;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../icons/tel.svg");
+    color: $base-white;
+  }
+}

@@ -1,3 +1,25 @@
-// search-filter
-// search-filter__sorting
-// search-filter__cheap
+.search-filter {
+  padding: 0 23px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-filter__sorting {
+  border: none;
+  background: none;
+  color: $base-primary;
+  padding: 4px 10px;
+  font-size: 16px;
+}
+
+.search-filter__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.search-filter__name--cheap {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}

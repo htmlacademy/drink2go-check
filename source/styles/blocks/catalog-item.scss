@@ -1,5 +1,36 @@
-// catalog-item
-// catalog-item__title
-// catalog-item__card-wrapper
-// catalog-item__text
-// catalog-item__price
+.catalog-item {
+  padding: 40px 20px 20px;
+  list-style: none;
+  background-color: $base-white;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.catalog-item__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: left;
+  color: $base-black;
+}
+
+.catalog-item__card-wrapper {
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.catalog-item__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.catalog-item__price {
+  margin: 0;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+}

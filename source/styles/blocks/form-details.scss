@@ -1,13 +1,68 @@
-// form-details
-// form-details__filter
-// form-details__title
+.form-details {
+  padding: 0 20px 40px;
+}
+
+.form-details__filter {
+  padding: 0;
+  margin: 0;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.form-details__title {
+  padding: 0;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 // form-details__range
-// form-details__wrapper
+.form-details__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 // form-details__price-min
-// form-details__label
-// form-details__input
+// .form-details__label {
+
+// }
+
+.form-details__input {
+  width: 118px;
+  padding: 8px 10px;
+  margin: 0;
+  border: 2px solid $alt-primary-lighter;
+  border-radius: 4px;
+}
+
+.form-details__label--disabled {
+  color: $base-grey;
+}
+
 // form-details__price-max
-// form-details__list
-// form-details__list-item
-// form-details__radio
+
+.form-details__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.form-details__list-item {
+  max-height: 24px;
+}
+
+.form-details__radio {
+  position: relative;
+  bottom: 28px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 20px;
+  border: 1px solid $base-grey;
+  background: $base-white;
+}
+
 // form-details__change
