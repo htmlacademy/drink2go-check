@@ -21,18 +21,59 @@
 .form-details__wrapper {
   display: flex;
   justify-content: space-between;
+  margin-top: 43px;
 }
 // form-details__price-min
-// .form-details__label {
 
-// }
+.form-details__label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.form-details__label--switch {
+  display: inline-block;
+  position: relative;
+}
+
+.form-details__label--switch input {
+  opacity: 1;
+}
+
 
 .form-details__input {
-  width: 118px;
   padding: 8px 10px;
   margin: 0;
   border: 2px solid $alt-primary-lighter;
   border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.form-details__input--width {
+  width: 118px;
+}
+
+.form-details__input--style {
+  height: 24px;
+  max-width: 10px;
+}
+
+.form-details__input--styles {
+  width: 48px;
+
+  &:checked + .form-details__change {
+    background: $base-primary;
+  }
+
+  &:checked + .form-details__change::before {
+    transform: translateX(20px);
+    left: 0;
+  }
 }
 
 .form-details__label--disabled {
@@ -56,13 +97,51 @@
 
 .form-details__radio {
   position: relative;
-  bottom: 28px;
+  bottom: 0;
+  right: 10px;
   display: block;
   width: 24px;
   height: 24px;
   border-radius: 20px;
-  border: 1px solid $base-grey;
+  border: 2px solid $base-grey;
   background: $base-white;
+
+  &::after:focus {
+    position: absolute;
+    content: "";
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: $base-primary;
+    border-radius: 8px;
+  }
+
+  &:checked {
+    border: 2px solid $base-primary;
+  }
 }
 
-// form-details__change
+.form-details__change {
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $base-grey;
+  border-radius: 12px;
+  width: 42px;
+  height: 24px;
+  transition: 0.3s;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    background: $base-white;
+    width: 20px;
+    height: 20px;
+    transition: 0.05s;
+    border-radius: 10px;
+  }
+}

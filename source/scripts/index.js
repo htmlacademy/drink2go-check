@@ -1,5 +1,5 @@
 // Получаем элементы слайдера
-const slider = document.querySelector('.slider');
+const slider = document.querySelector('.hero__position-slider');
 const prevButton = document.querySelector('.slider-button-prev');
 const nextButton = document.querySelector('.slider-button-next');
 const slides = Array.from(slider.querySelectorAll('picture'));

@@ -7,7 +7,13 @@
   margin-bottom: 20px;
 }
 
+.catalog-item__wrapper {
+  margin-top: 20px;
+}
+
 .catalog-item__title {
+  margin: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
@@ -22,6 +28,9 @@
 }
 
 .catalog-item__text {
+  max-width: 238px;
+  margin: 0;
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -29,7 +38,7 @@
 }
 
 .catalog-item__price {
-  margin: 0;
+  margin: 2px 0 0 -2px;
   font-weight: 600;
   font-size: 20px;
   line-height: 32px;

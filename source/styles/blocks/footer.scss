@@ -2,11 +2,14 @@
 // footer__container
 
 .footer__social {
-  padding: 20px;
+  padding: 20px 20px 17px;
   display: flex;
 }
 
-// footer__logo-image
+.footer__logo {
+  margin-top: 2px;
+}
+
 .footer__title {
   display: none;
 
@@ -20,10 +23,11 @@
   margin: 0;
   list-style: none;
   display: flex;
+  gap: 20px;
 }
 
 .footer__social-item {
-  padding: 9px;
+  padding: 10px;
   gap: 20px;
 }
 // footer__social-link
@@ -35,10 +39,10 @@
 }
 
 .footer__shop-title {
-  margin: 0;
-  margin-bottom: 12px;
+  margin: 0 0 10px;
   font-weight: 700;
   font-size: 14px;
+  letter-spacing: 0.02em;
   line-height: 20px;
   color: $base-primary;
 }
@@ -47,15 +51,35 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: -51px;
+    right: -21px;
+    width: 320px;
+    height: 1;
+    background-color: $base-secondary;
+  }
 }
 
 .footer__nav-item {
-  margin: 8px 0;
+  padding: 8px 0;
+  margin: 0;
 }
 
 .footer__nav-link {
   text-decoration: none;
   color: $base-black;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .footer__shop-media {
@@ -67,6 +91,8 @@
 }
 
 .footer__contacts-address {
+  margin-top: 23px;
+  position: relative;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -74,6 +100,26 @@
   display: flex;
   gap: 16px;
   flex-direction: column;
+
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   top: -51px;
+  //   right: -21px;
+  //   width: 320px;
+  //   height: 1;
+  //   background-color: $base-secondary;
+  // }
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   top: -51px;
+  //   right: -21px;
+  //   width: 320px;
+  //   height: 1;
+  //   background-color: $base-secondary;
+  // }
 }
 
 .footer__about-text {
