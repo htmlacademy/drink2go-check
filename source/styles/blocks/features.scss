@@ -3,7 +3,7 @@
   padding: 50px 20px 26px;
 
   @media (min-width: $min-width-tablet) {
-    padding: 60px 30px 100px;
+    padding: 60px 30px 78px;
   }
 
   @media (min-width: $min-width-desktop) {
@@ -14,15 +14,15 @@
 .features__badge-advatages {
   margin-bottom: 5px;
 
-  @media (min-width: $min-width-desktop) {
-    margin-bottom: 18px;
+  @media (min-width: $min-width-tablet) {
+    margin-bottom: 4px;
   }
 
   @media (min-width: $min-width-desktop) {
     margin-bottom: 4px;
   }
 }
-// features__wrapper
+
 .features__list {
   padding: 0;
   margin: 0;
@@ -76,14 +76,17 @@
   }
 
   @media (min-width: $min-width-tablet) {
+    align-items: flex-start;
+
     &::after {
-      top: 3px;
+      top: 4px;
       left: 0;
     }
   }
 
   @media (min-width: $min-width-desktop) {
     min-width: 318px;
+    align-items: center;
 
     &::after {
       top: 0;
@@ -107,16 +110,19 @@
   }
 
   @media (min-width: $min-width-tablet) {
+    align-items: flex-start;
+
     &::after {
+      top: 0;
       left: 0;
     }
   }
 
   @media (min-width: $min-width-desktop) {
     min-width: 317px;
+    align-items: center;
 
     &::after {
-      top: 0;
       left: 133px;
     }
   }
@@ -137,16 +143,19 @@
   }
 
   @media (min-width: $min-width-tablet) {
+    align-items: flex-start;
+
     &::after {
+      top: 0;
       left: 0;
     }
   }
 
   @media (min-width: $min-width-desktop) {
     min-width: 318px;
+    align-items: center;
 
     &::after {
-      top: 0;
       left: 133px;
     }
   }
@@ -167,13 +176,17 @@
   }
 
   @media (min-width: $min-width-tablet) {
+    align-items: flex-start;
+
     &::after {
+      top: 4px;
       left: 0;
     }
   }
 
   @media (min-width: $min-width-desktop) {
     min-width: 317px;
+    align-items: center;
 
     &::after {
       top: 0;
@@ -194,7 +207,7 @@
   line-height: 36px;
 
   @media (min-width: $min-width-tablet) {
-    margin-bottom: 59px;
+    margin-bottom: 60px;
     font-size: 42px;
     line-height: 64px;
   }
@@ -207,7 +220,7 @@
 .features__title--small {
   font-size: 18px;
   line-height: 32px;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 
   @media (min-width: $min-width-tablet) {
     margin: 0 0 10px 72px;
@@ -231,19 +244,20 @@
     margin-left: 72px;
     font-size: 16px;
     line-height: 24px;
+    text-align: left;
   }
 
   @media (min-width: $min-width-desktop) {
     margin: 0;
     max-width: 317px;
+    text-align: center;
   }
 }
 
 .features__advantages-discription--width {
   max-width: 230px;
-}
 
-// features__button-filter
-// features__search-filter
-// features__search-sorting
-// features__search-cheap
+  @media (min-width: $min-width-tablet) {
+    max-width: 267px;
+  }
+}

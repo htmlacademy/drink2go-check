@@ -1,0 +1,24 @@
+.js-toggle-button {
+  position: relative;
+
+  &::after {
+    content: "";
+    background-image: url("../../icons/cross.svg");
+    width: 16px;
+    height: 12px;
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    z-index: 9;
+    color: $base-black;
+    background-color: $base-white;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    display: none;
+
+    &::after {
+      display: none;
+    }
+  }
+}

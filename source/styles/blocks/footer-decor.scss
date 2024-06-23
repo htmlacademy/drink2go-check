@@ -11,4 +11,14 @@
     height: 1px;
     color: $base-secondary;
   }
+
+  @media (min-width: $min-width-tablet) {
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: $min-width-desktop) {
+    justify-content: flex-start;
+  }
 }

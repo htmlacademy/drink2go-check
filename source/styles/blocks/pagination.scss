@@ -3,6 +3,14 @@
   margin: 0;
   display: flex;
   gap: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    justify-content: flex-end;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 0;
+  }
 }
 
 .pagination__item {
@@ -16,6 +24,22 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
+
+  &:hover {
+    background-color: $alt-primary-lighter;
+  }
+
+  &:focus {
+    background-color: $alt-primary-lighter;
+  }
+
+  &:active {
+    background-color: $alt-primary-darker;
+  }
+
+  &:disabled {
+    background-color: $alt-light-grey;
+  }
 }
 
 .pagination__item--background {
@@ -25,6 +49,26 @@
 .pagination__current {
   text-decoration: none;
   color: $base-primary;
+
+  &:hover {
+    color: $base-white;
+    background-color: $alt-primary-lighter;
+  }
+
+  &:focus {
+    color: $base-white;
+    background-color: $alt-primary-lighter;
+  }
+
+  &:active {
+    color: $base-white;
+    background-color: $alt-primary-darker;
+  }
+
+  &:disabled {
+    color: $base-white;
+    background-color: $alt-light-grey;
+  }
 }
 
 .pagination__current--active {
@@ -42,10 +86,19 @@
     position: absolute;
     content: "";
     top: 15px;
-    left: 15px;
+    left: 16px;
     width: 6px;
     height: 10px;
     background-image: url("../../icons/stroke.svg");
+  }
+
+  @media (min-width: $min-width-tablet) {
+    min-width: 91px;
+    padding: 8px 20px;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -55,11 +108,28 @@
   &::after {
     position: absolute;
     content: "";
-    top: 7px;
-    left: -2px;
+    top: 15px;
+    left: 18px;
     width: 6px;
     height: 10px;
     background-image: url("../../icons/stroke.svg");
     transform: rotate(180deg);
+  }
+
+  @media (min-width: $min-width-tablet) {
+    min-width: 104px;
+    padding: 8px 20px;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.pagination__btn {
+  display: none;
+
+  @media (min-width: $min-width-tablet) {
+    display: block;
   }
 }

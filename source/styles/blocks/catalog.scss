@@ -1,6 +1,15 @@
 .catalog {
   padding: 50px 0 44px;
   background: $bg-lightest-grey;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 80px 0 91px;
+    padding-top: 80px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 100px 40px 120px;
+  }
 }
 
 .catalog__badge {
@@ -15,4 +24,9 @@
   font-size: 24px;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: $min-width-tablet) {
+    font-size: 42px;
+    line-height: 64px;
+  }
 }

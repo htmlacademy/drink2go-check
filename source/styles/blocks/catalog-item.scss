@@ -5,10 +5,31 @@
   border-radius: 4px;
   text-align: center;
   margin-bottom: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    width: 349px;
+    margin: 0;
+    padding: 51px 30px 29px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 317px;
+    padding: 50px 31px 30px 29px;
+  }
+}
+
+.catalog-item--style {
+  @media (min-width: $min-width-desktop) {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  }
 }
 
 .catalog-item__wrapper {
-  margin-top: 20px;
+  padding-top: 20px;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 27px 0 0;
+  }
 }
 
 .catalog-item__title {
@@ -19,6 +40,12 @@
   line-height: 32px;
   text-align: left;
   color: $base-black;
+
+  @media (min-width: $min-width-tablet) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 9px;
+  }
 }
 
 .catalog-item__card-wrapper {
@@ -35,6 +62,11 @@
   font-size: 14px;
   line-height: 20px;
   text-align: left;
+
+  @media (min-width: $min-width-tablet) {
+    max-width: 287px;
+    margin-bottom: 20px;
+  }
 }
 
 .catalog-item__price {

@@ -6,4 +6,14 @@
   height: 656px;
   background-color: transparent;
   border: none;
+
+  @media (min-width: $min-width-tablet) {
+    height: 640px;
+    top: 81px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    height: 714px;
+    top: 0;
+  }
 }

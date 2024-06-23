@@ -3,17 +3,29 @@
   font-family: $font-montserrat;
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 24px;
   text-align: center;
   color: $base-white;
   background-color: $base-primary;
   text-decoration: none;
   border: none;
   border-radius: 4px;
+
+  &:hover {
+    background: $alt-primary-lighter;
+  }
+
+  &:focus {
+    background: $alt-primary-lighter;
+  }
+
+  &:active {
+    background: $alt-primary-darker;
+  }
 }
 
 .button--basket {
-  min-width: 141px;
+  min-width: 140px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
@@ -32,7 +44,39 @@
   }
 }
 
+.button--filters {
+  width: 100%;
+
+  @media (min-width: $min-width-tablet) {
+    width: 137px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 149px;
+  }
+}
+
 .button--alternative {
   background-color: $base-white;
   color: $base-primary;
+
+  &:hover {
+    color: $base-white;
+  }
+
+  &:focus {
+    color: $base-white;
+  }
+
+  &:active {
+    color: $base-white;
+  }
+
+  @media (min-width: $min-width-tablet) {
+    width: 120px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    width: 149px;
+  }
 }

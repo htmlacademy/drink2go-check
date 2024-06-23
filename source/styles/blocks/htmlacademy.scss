@@ -1,12 +1,32 @@
 .htmlacademy {
-  padding: 20px 57px 30px;
+  padding: 25px 57px 26px;
   margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: $base-grey;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 13px 57px 0;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding-top: 24px;
+  }
 }
 
-// .htmlacademy--link {
+.htmlacademy__text {
+  position: relative;
+  bottom: 4px;
+}
 
-// }
+.htmlacademy__color {
+  bottom: 4px;
+  position: relative;
+  color: $base-grey;
+}
