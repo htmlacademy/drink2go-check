@@ -1,0 +1,12 @@
+.search-wrapper {
+  @media (min-width: $min-width-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.search-wrapper__style {
+  @media (min-width: $min-width-desktop) {
+    width: 1011px;
+  }
+}

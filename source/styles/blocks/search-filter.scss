@@ -1,0 +1,39 @@
+.search-filter {
+  padding: 44px 24px 19px 23px;
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+
+  @media (min-width: $min-width-tablet) {
+    padding: 44px 27px 29px 23px;
+    justify-content: end;
+    gap: 12px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    padding: 19px 8px 30px 0;
+  }
+}
+
+.search-filter__sorting {
+  border: none;
+  background: none;
+  color: $base-primary;
+  padding: 0 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $font-montserrat;
+}
+
+.search-filter__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.search-filter__name--cheap {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
