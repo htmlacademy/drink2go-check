@@ -1,0 +1,15 @@
+.map {
+  min-width: 320px;
+  max-height: 420px;
+  background-color: $alt-primary-lighter;
+
+  @media (min-width: $min-width-tablet) {
+    min-width: 768;
+    max-height: 480px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    min-width: 1440px;
+    max-height: 540px;
+  }
+}

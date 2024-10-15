@@ -1,0 +1,18 @@
+.slider-button-next {
+  position: absolute;
+  top: 59px;
+  right: -1px;
+  width: 20px;
+  height: 656px;
+  background-color: transparent;
+  border: none;
+
+  @media (min-width: $min-width-tablet) {
+    top: 70px;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    top: 0;
+    height: 714px;
+  }
+}
