@@ -28,11 +28,13 @@
 
 .user-menu__item {
   display: flex;
-  justify-content: center;
   width: 60px;
   height: 60px;
 
-  @media (min-width: $tablet-width) {}
+  @media (min-width: $tablet-width) {
+
+    justify-content: center;
+  }
 
   @media (min-width: $desktop-width) {
     min-width: 120px;
@@ -40,10 +42,8 @@
 }
 
 .user-menu__link {
-  width: 100%;
   display: flex;
   align-items: center;
-  // justify-content: center;
 }
 
 .user-menu__cart--hidden,
@@ -56,6 +56,10 @@
 }
 
 .user-menu__enter {
+  @media (min-width: $desktop-width) {
+    min-width: 134px;
+  }
+
   &::before {
     @include user-menu-base-styles;
     mask-image: url("../../icons/header/enter.svg");
@@ -63,6 +67,10 @@
 }
 
 .user-menu__cart {
+  @media (min-width: $desktop-width) {
+    min-width: 110px;
+  }
+
   &::before {
     @include user-menu-base-styles;
     mask-image: url("../../icons/header/cart.svg");

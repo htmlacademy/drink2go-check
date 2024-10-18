@@ -12,9 +12,10 @@
   @include list-reset;
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto;
+    margin: 0 0 0 19px;
     display: flex;
-    width: 400px;
+    flex-wrap: wrap;
+    width: 410px;
     align-items: center;
     justify-content: space-between;
   }
