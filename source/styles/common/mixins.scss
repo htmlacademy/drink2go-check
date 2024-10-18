@@ -5,6 +5,7 @@
    list-style: none;
  }
 
+ /* user-menu base styles*/
  @mixin user-menu-base-styles {
    content: "";
    width: 16px;
@@ -12,3 +13,11 @@
    display: block;
    background: #444444;
  }
+
+/*features base styles*/
+@mixin features-icon-base-styles {
+  content: "";
+  width: 50px;
+  height: 55px;
+  display: block;
+}
