@@ -16,7 +16,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 10;
-  margin: 0px 10px;
+  margin: 0 auto;
   color: $base-black;
   font-family: $montserrat-medium;
   font-size: 24px;
@@ -52,13 +52,42 @@
 .features__caption {
   min-width: 75px;
   padding: 0 20px;
-  margin: 20px auto 20px;
+  margin: 10px 0 0;
   font-family: $montserrat-bold;
   color: $base-black;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   text-align: center;
+}
+
+.features__span {
+  margin: 30px 0 0;
+}
+
+
+.features__icon {
+  margin: 30px 0 0;
+
+  &--speed::before {
+    @include features-icon-base-styles;
+    background-image: url("../../icons/features/clock.svg");
+  }
+
+  &--comfort::before {
+    @include features-icon-base-styles;
+    background-image: url("../../icons/features/pocket.svg");
+  }
+
+  &--energy::before {
+    @include features-icon-base-styles;
+    background-image: url("../../icons/features/lightning.svg");
+  }
+
+  &--eco::before {
+    @include features-icon-base-styles;
+    background-image: url("../../icons/features/leaf.svg");
+  }
 }
 
 .features__description {
