@@ -1,15 +1,12 @@
 .header {
   background-color: $white;
-
-
 }
 
 .header__wrapper {
-
   @media (max-width: $mobile-width-only) {
     position: relative;
     width: 320px;
-    padding: 0px 20px;
+    padding: 0 20px;
     min-height: 60px;
     margin: 0 auto;
     display: flex;
@@ -41,12 +38,10 @@
     // min-width: 130px;
     display: flex;
     align-items: center;
-
   }
 }
 
 @media (min-width: $desktop-width) {
-
   .header__text-title-desktop {
     margin-left: 20px;
     width: 132px;
@@ -102,10 +97,10 @@
 }
 
 .header--closed .js-toggle-button:active::before {
-  background-color: fade($base-black, 30%);
+  background-color: ($base-black, 30%);
   box-shadow:
-    0 8px 0 0 fade($base-black, 30%),
-    0 16px 0 0 fade($base-black, 30%);
+    0 8px 0 0 ($base-black 30%),
+    0 16px 0 0 ($base-black 30%);
 }
 
 @media (max-width: $mobile-width-only) {

@@ -7,7 +7,7 @@
   text-transform: uppercase;
 
   @media (max-width: $mobile-width-only) {
-    padding: 20px 0 ;
+    padding: 20px 0;
     outline-offset: unset;
   }
 
@@ -15,10 +15,6 @@
     border: none;
     font-size: 12px;
     line-height: 16px;
-  }
-
-  @media (min-width: $desktop-width) {
-
   }
 }
 
@@ -37,9 +33,6 @@
 // }
 
 .site-list__item {
-  // z-index: 10;
-  // position: relative;
-
   @media (max-width: $mobile-width-only) {
     border-top: 1px solid $base-secondary;
   }
@@ -54,7 +47,6 @@
   }
 
   &:last-child {
-
     @media (max-width: $mobile-width-only) {
       border-bottom: 1px solid $base-secondary;
     }

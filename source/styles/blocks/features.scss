@@ -1,9 +1,9 @@
-.features {
-  // @media (min-width: $desktop-width) {
-  //   width: 1140px;
-  //   padding: 50px 40px;
-  // }
-}
+// .features {
+//   // @media (min-width: $desktop-width) {
+//   //   width: 1140px;
+//   //   padding: 50px 40px;
+//   // }
+// }
 
 .features__wrapper {
   margin: 0 auto;
@@ -38,17 +38,16 @@
   @media (min-width: $tablet-width) {
     min-width: 560px;
     // height: 120px;
-    font-size: 38px;
+    font-size: 42px;
     font-weight: 700;
-    line-height: 60px;
-    letter-spacing: 0%;
+    line-height: 64px;
+    letter-spacing: 0.1vw;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 50px;
   }
-
 }
 
 .features__subtitle {
@@ -70,8 +69,8 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 60px;
+    grid-template-columns: 368px 363px;
+    margin-top: 62px;
   }
 
   @media (min-width: $desktop-width) {
@@ -80,9 +79,8 @@
     // flex-direction: row;
     display: grid;
     column-gap: 10px;
-    grid-template-columns:250px 260px 250px 240px;
+    grid-template-columns: 250px 260px 250px 240px;
   }
-
 }
 
 .features__item {
@@ -98,7 +96,8 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
-    padding: 0 25px 0 73px;
+    padding: 0 25px 0 83px;
+    margin: 0 0 56px;
   }
 
   @media (min-width: $desktop-width) {
@@ -124,7 +123,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
-    margin: 0;
+    margin: 0 0 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -143,16 +142,14 @@
 // }
 
 .features__icon {
-
-
   @media (max-width: $mobile-width-only) {
     margin: 36px 0 0;
   }
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    top: -10px;
-    left: 0;
+    top: -14px;
+    left: 12;
     margin: 15px 0 0;
   }
 
@@ -186,11 +183,10 @@
 .features__description {
   margin: 5px auto -5px;
   color: $base-black;
-  font-family: $montserrat-regular;
+  font-family: $montserrat-medium;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: 0%;
   text-align: center;
 
   @media (min-width: $tablet-width) {
@@ -199,7 +195,8 @@
 
   @media (min-width: $tablet-width) {
     font-size: 14px;
-    line-height: 22px;
+    line-height: 24px;
+    letter-spacing: 0.13vw;
   }
 
   @media (min-width: $desktop-width) {
