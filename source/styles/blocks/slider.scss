@@ -26,6 +26,11 @@
   @media (min-width: $tablet-width) {
     min-height: 828px;
   }
+
+  @media (min-width: $desktop-width) {
+    min-height: 714px;
+    height: 714px;
+  }
 }
 
 .slider__item--decaf {
@@ -77,7 +82,7 @@
 .slider__item-inner {
   display: flex;
   flex-direction: column;
-  position: relative;
+  // position: relative;
   padding-top: 20px;
   padding-bottom: 60px;
 
@@ -87,7 +92,8 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    padding: 30px 0 60px;
+    padding: 30px 105px 85px;
+    gap: 30px;
   }
 }
 
@@ -95,6 +101,10 @@
 .slider__item-image {
   display: block;
   margin: 0 auto 10px;
+
+  // @media (min-width: $desktop-width) {
+  //   margin: 0 auto 0 105px;
+  // }
 }
 
 .slider__picture {
@@ -150,7 +160,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 180px 0;
+    margin: 150px 0 0;
     padding: 0;
     align-items: start;
   }
@@ -162,7 +172,7 @@
   display: block;
   font-size: 14px;
   line-height: 20px;
-  width: 282px;
+  width: 281px;
   margin: 0 0 20px;
   padding: 0;
 
@@ -170,7 +180,7 @@
     padding: 0;
     font-size: 20px;
     line-height: 32px;
-    width: 608px;
+    width: 600px;
   }
 
   @media (min-width: $desktop-width) {
@@ -212,11 +222,6 @@
   letter-spacing: 0.02em;
 }
 
-.slider__pagination {
-  display: none;
-}
-
-
 .slider__arrow--right {
   position: absolute;
   content: "";
@@ -237,7 +242,8 @@
     width: 11px;
     height: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   &:hover {
@@ -254,9 +260,16 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    height: 714px;
   }
-}
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $base-grey;
+    }
+}}
 
 .slider__arrow--left {
   position: absolute;
@@ -278,11 +291,8 @@
     width: 11px;
     height: 20px;
     left: 50%;
-    transform: translateX(-50%);
-
-    @media (min-width: $tablet-width) {
-      top: 310px;
-    }
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
   &:hover {
@@ -294,7 +304,11 @@
   }
 
   &:disabled {
-    cursor: not-allowed; //поменять цвет стрелки
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $base-grey;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -303,49 +317,51 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    height: 714px;
   }
 }
 
 .slider__pagination {
   display: none;
-  @media (min-width: $desktop-width) {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  }
 
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    content: "";
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 70px;
+  }
 }
 
-
 .slider__indicator {
-    display: block;
-    width: 62px;
-    height: 4px;
-    margin: 0 4px;
-    background-color: red;
-    cursor: pointer;
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  cursor: pointer;
 
-    &--active {
-      background-color: $base-primary;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: $primary-opacity;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    &:active {
-      background-color: $base-primary;
-    }
-
-    &--active:hover,
-    &--active:focus {
-      background-color: $base-primary;
-    }
+  &--active {
+    background-color: $base-primary;
   }
 
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+
+  &--active:hover,
+  &--active:focus {
+    background-color: $base-primary;
+  }
+}

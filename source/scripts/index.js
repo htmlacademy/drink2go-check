@@ -8,63 +8,69 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('main-navigation--open');
     menu.classList.toggle('main-navigation--closed');
-    menuToggle.classList.toggle('header__toggle-iconline--opened'); // убрала точку перед классом
+    menuToggle.classList.toggle('header__toggle-iconline--opened');
   });
 });
 
 
 
 //slider
-document.addEventListener('DOMContentLoaded', function() {
-  const sliderItems = document.querySelectorAll('.slider__item'); // Слайды
-  const prevButton = document.querySelector('.slider__arrow--left'); // Кнопка "Предыдущий слайд"
-  const nextButton = document.querySelector('.slider__arrow--right'); // Кнопка "Следующий слайд"
-  let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderItems = document.querySelectorAll('.slider__item');
+  const paginationIndicators = document.querySelectorAll('.slider__indicator');
+  const prevArrow = document.querySelector('.slider__arrow--left');
+  const nextArrow = document.querySelector('.slider__arrow--right');
+  let currentSlideIndex = 0;
 
-  // Функция обновления видимого слайда
-  function updateSlides() {
+  // Функция для обновления состояния слайдов и пагинации
+  function updateSlider() {
+    // Скрыть все слайды
     sliderItems.forEach((item, index) => {
-      if (index === currentSlide) {
-        item.classList.add('slider__item--current');
-        item.classList.remove('swiper-slide-prev', 'swiper-slide-next');
-      } else {
-        item.classList.remove('slider__item--current');
-        if (index === currentSlide - 1) {
-          item.classList.add('swiper-slide-prev');
-        } else if (index === currentSlide + 1) {
-          item.classList.add('swiper-slide-next');
-        } else {
-          item.classList.remove('swiper-slide-prev', 'swiper-slide-next');
-        }
-      }
+      item.classList.remove('slider__item--current');
     });
-    updateButtons();
+
+    // Убрать активные состояния пагинации
+    paginationIndicators.forEach((indicator) => {
+      indicator.classList.remove('slider__indicator--active');
+    });
+
+    // Показать текущий слайд
+    sliderItems[currentSlideIndex].classList.add('slider__item--current');
+
+    // Активировать текущий индикатор
+    paginationIndicators[currentSlideIndex].classList.add('slider__indicator--active');
+
+    // Отключаем кнопки если мы на первом или последнем слайде
+    // prevArrow.disabled = currentSlideIndex === 0;
+    // nextArrow.disabled = currentSlideIndex === sliderItems.length - 1;
   }
 
-  // Обновление состояния кнопок
-  function updateButtons() {
-    prevButton.disabled = currentSlide === 0;
-    nextButton.disabled = currentSlide === sliderItems.length - 1;
-  }
-
-  // Обработчик клика для кнопки "Следующий слайд"
-  nextButton.addEventListener('click', function() {
-    if (currentSlide < sliderItems.length - 1) {
-      currentSlide++;
-      updateSlides();
+  // Обработчик для кнопки "Предыдущий слайд"
+  prevArrow.addEventListener('click', () => {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      updateSlider();
     }
   });
 
-  // Обработчик клика для кнопки "Предыдущий слайд"
-  prevButton.addEventListener('click', function() {
-    if (currentSlide > 0) {
-      currentSlide--;
-      updateSlides();
+  // Обработчик для кнопки "Следующий слайд"
+  nextArrow.addEventListener('click', () => {
+    if (currentSlideIndex < sliderItems.length - 1) {
+      currentSlideIndex++;
+      updateSlider();
     }
   });
 
-  // Инициализация
-  updateSlides();
+  // Обработчики для клика на пагинацию
+  paginationIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentSlideIndex = index;
+      updateSlider();
+    });
+  });
+
+  // Инициализация слайдера при загрузке
+  updateSlider();
 });
 
 
