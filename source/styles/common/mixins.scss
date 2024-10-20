@@ -1,0 +1,23 @@
+//  reset default styles (ul)
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+//  user-menu base styles
+@mixin user-menu-base-styles {
+  content: "";
+  width: 16px;
+  height: 16px;
+  display: block;
+  background: #444444;
+}
+
+// features base styles
+@mixin features-icon-base-styles {
+  content: "";
+  width: 52px;
+  height: 56px;
+  display: block;
+}
