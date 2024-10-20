@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    width: 1140px;
+    width: 1440px;
     padding: 50px 40px;
   }
 }
@@ -28,25 +28,25 @@
   display: flex;
   margin: 4px auto 0;
   color: $base-black;
-  font-family: $montserrat-medium;
+  font-family: $montserrat-bold;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
-  letter-spacing: 0.41px;
 
   @media (min-width: $tablet-width) {
     min-width: 560px;
-    // height: 120px;
     font-size: 42px;
     font-weight: 700;
     line-height: 64px;
-    letter-spacing: 0.1vw;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 50px;
+    font-size: 40px;
+    letter-spacing: 0.09vw;
+
   }
 }
 
@@ -75,11 +75,14 @@
 
   @media (min-width: $desktop-width) {
     align-items: normal;
-    // display: flex;
-    // flex-direction: row;
     display: grid;
-    column-gap: 10px;
-    grid-template-columns: 250px 260px 250px 240px;
+    align-items: stretch;
+    // justify-content: center;
+    grid-template-columns: repeat(4, 317px);
+    // grid-template-columns:  318px 300px 305px 300px;
+    column-gap: 31px;
+    margin-top: 108px;
+
   }
 }
 
@@ -123,7 +126,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 36px;
-    margin: 0 0 4px;
+    margin: 0 0 3px;
   }
 
   @media (min-width: $desktop-width) {
@@ -143,19 +146,19 @@
 
 .features__icon {
   @media (max-width: $mobile-width-only) {
-    margin: 36px 0 0;
+    margin: 35px 0 0;
   }
 
   @media (min-width: $tablet-width) {
     position: absolute;
     top: -14px;
     left: 12;
-    margin: 15px 0 0;
+    margin: 12px 0 0;
   }
 
   @media (min-width: $desktop-width) {
-    top: -70px;
-    left: 110px;
+    top: -90px;
+    left: 133px;
     text-align: center;
   }
 
@@ -201,7 +204,8 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
   }
 }
