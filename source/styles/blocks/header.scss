@@ -56,10 +56,13 @@
   @media (min-width: $tablet-width) {
     margin-left: auto;
     min-width: 120px;
+    max-width: 180px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 20px;
+    max-width: 280px;
+
   }
 }
 
@@ -153,7 +156,7 @@
     height: 16px;
 
     @media (min-width: $desktop-width) {
-      left: 20px;
+      left: 19px;
     }
   }
 
@@ -241,14 +244,14 @@
 
   &::before {
     transform: rotate(45deg);
-    top: 50%;
+    top: 0;
     transform-origin: center;
     background-color: $base-black;
   }
 
   &::after {
     transform: rotate(-45deg);
-    top: 50%;
+    top: 0;
     transform-origin: center;
     background-color: $base-black;
   }

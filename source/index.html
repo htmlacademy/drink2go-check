@@ -75,9 +75,9 @@
     <h1 class="visually-hidden">Главная страница</h1>
     <section class="hero">
       <h2 class="hero__heading visually-hidden">Новинки</h2>
-      <div class="hero__slider slider swiper">
-        <ul class="slider__list swiper-wrapper">
-          <li class="slider__item slider__item--decaf slider__item--current swiper-slide">
+      <div class="hero__slider slider">
+        <ul class="slider__list">
+          <li class="slider__item slider__item--decaf slider__item--current">
             <div class="slider__item-inner container">
               <div class="slider__picture">
                 <picture>
@@ -95,7 +95,7 @@
                 <span class="slider__new-label">Новинка!</span>
                 <h2 class="slider__title">Декаф Флэт Уайт</h2>
                 <p class="slider__description">
-                  Свежесваренный кофе без кофеина из Эфиопии <br>с натуральным фермерским молоком — то, что нужно <br>
+                  Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно
                   для расслабления после тяжёлого рабочего дня</p>
                 <div class="slider__buy">
                   <span class="slider__old-price">295₽</span>
@@ -103,16 +103,16 @@
                   <a class="slider__button button " href="#catalog">Заказать</a>
                 </div>
               </div>
-              <button class="slider__arrow slider__arrow--left swiper-button-prev" type="button">
+              <button class="slider__arrow slider__arrow--left" type="button">
                 <span class="visually-hidden">Предыдущий слайд.</span>
               </button>
-              <button class="slider__arrow slider__arrow--right swiper-button-next" type="button">
+              <button class="slider__arrow slider__arrow--right" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
               </button>
             </div>
           </li>
 
-          <li class="slider__item slider__item--lavender swiper-slide">
+          <li class="slider__item slider__item--lavender">
             <div class="slider__item-inner container">
               <div class="slider__picture">
                 <picture>
@@ -139,16 +139,16 @@
                   <a class="slider__button button " href="#catalog">Заказать</a>
                 </div>
               </div>
-              <button class="slider__arrow slider__arrow--left swiper-button-prev" type="button">
+              <button class="slider__arrow slider__arrow--left" type="button">
                 <span class="visually-hidden">Предыдущий слайд.</span>
               </button>
-              <button class="slider__arrow slider__arrow--right swiper-button-next" type="button">
+              <button class="slider__arrow slider__arrow--right" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
               </button>
             </div>
           </li>
 
-          <li class="slider__item slider__item--triple swiper-slide">
+          <li class="slider__item slider__item--triple">
             <div class="slider__item-inner container">
               <div class="slider__picture">
                 <picture>
@@ -175,10 +175,10 @@
                   <a class="slider__button button " href="#catalog">Заказать</a>
                 </div>
               </div>
-              <button class="slider__arrow slider__arrow--left swiper-button-prev" type="button">
+              <button class="slider__arrow slider__arrow--left" type="button">
                 <span class="visually-hidden">Предыдущий слайд.</span>
               </button>
-              <button class="slider__arrow slider__arrow--right swiper-button-next" type="button">
+              <button class="slider__arrow slider__arrow--right" type="button">
                 <span class="visually-hidden">Следующий слайд.</span>
               </button>
             </div>
@@ -204,34 +204,16 @@
                   height="476">
                 <img class="slider__item-image" src="images/item-3-mobile-slider@1x.png"
                   srcset="images/item-3-mobile-slider@2x.png" width="280" height="280" alt="Декаф Флэт Уайт">
-              </div>
-              <div class="slider__description-wrapper">
-                <span class="slider__new-label">Новинка!</span>
-                <h2 class="slider__title">Тройной эспрессо</h2>
-
-                <p class="slider__description">
-                  Мощнее укола адреналина, чернее самой тёмной ночи, этот отличный тройной эспрессо из Колумбии
-                  покажет
-                  вам,
-                  что
-                  такое настоящая бодрость</p>
-                <div class="slider__buy">
-                  <span class="slider__old-price">395₽</span>
-                  <span class="slider__price">375₽</span>
-                  <a class="slider__button button " href="#catalog">Заказать</a>
-                </div>
-
-              </div>
-
-            </div>
-          </li> -->
+              </div> -->
         </ul>
-
-
 
       </div>
 
-      <div class="slider__pagination swiper-pagination"></div>
+      <div class="slider__pagination">
+        <div class="slider__indicator slider__indicator--active"></div>
+        <div class="slider__indicator"></div>
+        <div class="slider__indicator"></div>
+      </div>
 
 
     </section>

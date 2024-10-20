@@ -21,44 +21,52 @@ document.addEventListener('DOMContentLoaded', function() {
   const nextButton = document.querySelector('.slider__arrow--right'); // Кнопка "Следующий слайд"
   let currentSlide = 0;
 
-  // Обновляем состояние кнопок
-  function updateButtons() {
-      if (currentSlide === 0) {
-          prevButton.disabled = true; // Блокируем кнопку "Назад" на первом слайде
+  // Функция обновления видимого слайда
+  function updateSlides() {
+    sliderItems.forEach((item, index) => {
+      if (index === currentSlide) {
+        item.classList.add('slider__item--current');
+        item.classList.remove('swiper-slide-prev', 'swiper-slide-next');
       } else {
-          prevButton.disabled = false;
+        item.classList.remove('slider__item--current');
+        if (index === currentSlide - 1) {
+          item.classList.add('swiper-slide-prev');
+        } else if (index === currentSlide + 1) {
+          item.classList.add('swiper-slide-next');
+        } else {
+          item.classList.remove('swiper-slide-prev', 'swiper-slide-next');
+        }
       }
-
-      if (currentSlide === sliderItems.length - 1) {
-          nextButton.disabled = true; // Блокируем кнопку "Вперед" на последнем слайде
-      } else {
-          nextButton.disabled = false;
-      }
+    });
+    updateButtons();
   }
 
-  // Перемещаем к предыдущему слайду
-  prevButton.addEventListener('click', function() {
-      if (currentSlide > 0) {
-          sliderItems[currentSlide].classList.remove('slider__item--current'); // Убираем класс активного слайда
-          currentSlide--; // Переходим на предыдущий слайд
-          sliderItems[currentSlide].classList.add('slider__item--current'); // Добавляем класс новому активному слайду
-          updateButtons(); // Обновляем состояние кнопок
-      }
-  });
+  // Обновление состояния кнопок
+  function updateButtons() {
+    prevButton.disabled = currentSlide === 0;
+    nextButton.disabled = currentSlide === sliderItems.length - 1;
+  }
 
-  // Перемещаем к следующему слайду
+  // Обработчик клика для кнопки "Следующий слайд"
   nextButton.addEventListener('click', function() {
-      if (currentSlide < sliderItems.length - 1) {
-          sliderItems[currentSlide].classList.remove('slider__item--current'); // Убираем класс активного слайда
-          currentSlide++; // Переходим на следующий слайд
-          sliderItems[currentSlide].classList.add('slider__item--current'); // Добавляем класс новому активному слайду
-          updateButtons(); // Обновляем состояние кнопок
-      }
+    if (currentSlide < sliderItems.length - 1) {
+      currentSlide++;
+      updateSlides();
+    }
   });
 
-  // Инициализация начального состояния кнопок
-  updateButtons();
+  // Обработчик клика для кнопки "Предыдущий слайд"
+  prevButton.addEventListener('click', function() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlides();
+    }
+  });
+
+  // Инициализация
+  updateSlides();
 });
+
 
 
 //noUiSlider

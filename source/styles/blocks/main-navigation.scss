@@ -12,7 +12,7 @@
     position: static;
     flex-flow: row wrap;
     margin: 0;
-    margin-right: 60px;
+    // margin-right: 60px;
     padding: 0;
     z-index: 0;
     background-color: transparent;
@@ -21,6 +21,8 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    width: 500px;
+
   }
 }
 
@@ -74,8 +76,16 @@
 .main-navigation__item:first-child {
   border-top: solid 1px $base-secondary;
 
+
   @media (min-width: $tablet-width) {
     border: none;
+    margin-right: 1px;
+  }
+}
+
+.main-navigation__item:last-child {
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
   }
 }
 
@@ -104,8 +114,8 @@
     &::before {
       position: absolute;
       content: "";
-      width: 100%;
-      right: 0;
+      width: 101%;
+      right: -1px;
       bottom: 0;
       height: 2px;
       background-color: $base-primary;
