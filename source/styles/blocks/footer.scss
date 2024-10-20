@@ -37,14 +37,12 @@
   @media (min-width: $desktop-width) {
     flex-flow: column wrap;
     justify-content: unset;
-
   }
 }
 
 .footer__header-logo-wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
@@ -57,7 +55,7 @@
   line-height: 20px;
   letter-spacing: 0.02em;
   color: $base-primary;
-  margin: 0 0 17px 0;
+  margin: 0 0 17px;
 }
 
 .footer__main-list {
@@ -65,8 +63,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   gap: 17px;
 }
 
@@ -95,7 +92,7 @@
 }
 
 .footer__main-primary-item {
-  padding: 20px 0 28px 0;
+  padding: 20px 0 28px;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -107,7 +104,7 @@
     min-width: 317px;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     height: 1px;
@@ -120,7 +117,6 @@
       display: none;
     }
   }
-
 }
 
 .footer__main-primary-item:last-child {
@@ -179,18 +175,17 @@
   display: block;
 
   @media (min-width: $tablet-width) {
-  width: 204px;}
+    width: 204px;
+  }
 
   @media (min-width: $desktop-width) {
-    width: 298px;}
-
-
+    width: 298px;
+  }
 }
 
 .footer__contacts-adress::before {
   background-image: url("../../icons/stack.svg#location");
   top: 5px;
-
 }
 
 
@@ -214,8 +209,6 @@
     margin: 0 auto;
   }
 
-
-
   // @media (min-width: $tablet-width) {
   //   padding: 0;
   //   grid-column: 1/-1;
@@ -229,7 +222,6 @@
   // transition: 0.3s ease;
   color: $base-grey;
   text-decoration: none;
-
 
   &::after {
     content: "";

@@ -1,7 +1,6 @@
 .slider {
   // position: relative;
   height: 100%;
-
 }
 
 .slider__list {
@@ -11,12 +10,11 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
+
     align-items: center;
     justify-content: center;
   }
-
 }
 
 .slider__item {
@@ -28,10 +26,6 @@
   @media (min-width: $tablet-width) {
     min-height: 828px;
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .slider__item--decaf {
@@ -40,9 +34,10 @@
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(to bottom, $bg-flat-white 640px, $base-white 640px);
   }
+
   @media (min-width: $desktop-width) {
     background-image: none;
-    background-color: $bg-flat-white ;
+    background-color: $bg-flat-white;
   }
 }
 
@@ -57,7 +52,6 @@
     background-image: none;
     background-color: $bg-lavender-latte;
   }
-
 }
 
 .slider__item--triple {
@@ -66,6 +60,7 @@
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(to bottom, $bg-espresso 640px, $base-white 640px);
   }
+
   @media (min-width: $desktop-width) {
     background-image: none;
     background-color: $bg-espresso;
@@ -78,31 +73,28 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
-
 }
 
 .slider__item-inner {
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 20px 0 60px 0;
+  padding: 20px 0 60px;
 
-
-@media (min-width: $tablet-width) {
-  padding: 60px 0 0 0;}
+  @media (min-width: $tablet-width) {
+    padding: 60px 0 0;
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    padding: 30px 0 60px 0;
-
+    padding: 30px 0 60px;
   }
 }
 
 
 .slider__item-image {
   display: block;
-  margin: 0 auto 10px auto;
+  margin: 0 auto 10px;
 }
 
 .slider__picture {
@@ -112,12 +104,11 @@
 
   @media (min-width: $desktop-width) {
     order: 0;
-
   }
 }
 
 .slider__new-label {
-  margin: 0 0 4px 0;
+  margin: 0 0 4px;
   padding: 0;
   text-transform: uppercase;
   color: $base-primary;
@@ -132,7 +123,7 @@
 }
 
 .slider__title {
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   padding: 0;
   font-size: 36px;
   line-height: 48px;
@@ -141,34 +132,27 @@
   letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 16px 0;
+    margin: 0 0 16px;
     padding: 0;
     font-size: 56px;
     line-height: 80px;
-
-  }
-  @media (min-width: $desktop-width) {
-
-
   }
 }
 
 .slider__description-wrapper {
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    margin: 0 0 20px 0;
+    margin: 0 0 20px;
     padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    margin:  180px 0 0;
+    margin: 180px 0;
     padding: 0;
     align-items: start;
-
   }
 }
 
@@ -178,7 +162,7 @@
   font-size: 14px;
   line-height: 20px;
   width: 280px;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
   padding: 0;
 
   @media (min-width: $tablet-width) {
@@ -187,12 +171,11 @@
     line-height: 32px;
     width: 608px;
   }
+
   @media (min-width: $desktop-width) {
     text-align: left;
-    margin: 0 0 40px 0;
-
+    margin: 0 0 40px;
   }
-
 }
 
 .slider__buy {
@@ -239,7 +222,7 @@
   height: 100%;
   width: 20px;
   top: 0;
-  right: 0px;
+  right: 0;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -254,12 +237,6 @@
     height: 20px;
     left: 50%;
     transform: translateX(-50%);
-    // top: 0;
-    // bottom: 317px;
-
-    @media (min-width: $tablet-width) {
-      // top: 310px;
-    }
   }
 
   &:hover {
@@ -272,15 +249,12 @@
 
   @media (min-width: $tablet-width) {
     height: 640px;
-    // right: 30px;
     width: 80px;
-
   }
 
   @media (min-width: $desktop-width) {
-  height: 100%;
-}
-
+    height: 100%;
+  }
 }
 
 .slider__arrow--left {
@@ -290,7 +264,6 @@
   width: 20px;
   top: 0;
   left: 0;
-
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -320,15 +293,12 @@
   }
 
   &:disabled {
-    //поменять цвет стрелки
-    cursor: not-allowed;
+    cursor: not-allowed; //поменять цвет стрелки
   }
 
   @media (min-width: $tablet-width) {
     height: 640px;
-    // left: 30px;
     width: 80px;
-
   }
 
   @media (min-width: $desktop-width) {

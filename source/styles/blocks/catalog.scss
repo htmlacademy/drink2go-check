@@ -4,7 +4,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 80px 0 0;
-
   }
 }
 
@@ -31,16 +30,14 @@
   @media (min-width: $tablet-width) {
     font-size: 42px;
     line-height: 64px;
-
   }
 }
 
 .catalog__desktop-wrapper {
   @media (min-width: $desktop-width) {
     display: flex;
-    gap: 20px
+    gap: 20px;
   }
-
 }
 
 .catalog__form {
@@ -52,15 +49,12 @@
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
     gap: 30px;
-
   }
 
   @media (min-width: $desktop-width) {
     flex-flow: column wrap;
     gap: 30px;
-
   }
-
 }
 
 .catalog__filter-buttons {
@@ -75,10 +69,11 @@
   }
 }
 
-.catalog__filter-button  {
+.catalog__filter-button {
   @media (min-width: $tablet-width) {
     width: 137px;
   }
+
   @media (min-width: $desktop-width) {
     width: 149px;
   }
@@ -94,12 +89,9 @@
   }
 
   @media (min-width: $desktop-width) {
-
     width: 318px;
   }
-
 }
-
 
 .catalog__filter-title {
   font-family: "Montserrat Semi Bold", "Arial", sans-serif;
@@ -109,29 +101,8 @@
   padding: 0;
 }
 
-// .catalog__filter-range-wrapper {
-//   margin-bottom: 1px;
-// }
-
-// .catalog__filter-range {
-//   display: flex;
-//   gap: 44px;
-//   position: relative;
-
-// }
-
-// .catalog__range-input {
-//   padding: 0;
-//   width: 118px;
-//   min-height: 40px;
-//   border-radius: 4px;
-//   border: solid 2px $primary-lighter;
-//   text-align: center;
-// }
-
 .catalog__range-input::-webkit-outer-spin-button,
 .catalog__range-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
   appearance: none;
   margin: 0;
 }
@@ -139,7 +110,7 @@
 .catalog__filter-scale {
   position: relative;
   height: 4px;
-  margin: 9px 0 34px 0;
+  margin: 9px 0 34px;
   background-color: $light-grey;
 }
 
@@ -158,33 +129,14 @@
   border-radius: 50%;
   cursor: pointer;
   padding: 0;
-  // &:hover,
-  // &:focus-visible {
-  //   background-color: $primary-opacity;
-  // }
-  // &:active {
-  //   background-color: $base-primary;
-  // }
 }
-
-// .catalog__filter-toggle--min {
-//   top: 50%;
-//   transform: translateY(-50%);
-// }
-
-// .catalog__filter-toggle--max {
-//   top: 50%;
-//   transform: translateY(-50%);
-//   right: -19px;
-// }
 
 .catalog__filter-list {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   gap: 20px;
 }
 
@@ -196,7 +148,7 @@
 .catalog__control {
   position: relative;
   display: block;
-  padding-left: 34px; //or 36
+  padding-left: 34px;
   cursor: pointer;
 }
 
@@ -225,42 +177,12 @@
   }
 }
 
-.catalog__control-input[type="radio"]+.catalog__control-mark {
+.catalog__control-input[type="radio"] + .catalog__control-mark {
   padding: 4px;
   border-radius: 50%;
 }
 
-.catalog__control-input[type="radio"]:checked+.catalog__control-mark::before {
-  background-color: $base-primary;
-}
-
-.catalog__control-input[type="radio"]:disabled+.catalog__control-mark {
-  background-color: transparent;
-  border-color: $light-grey;
-  cursor: not-allowed;
-}
-
-.catalog__control-input[type="radio"]:disabled~.catalog__control-label {
-  color: $base-grey;
-}
-
-.catalog__control-input[type="radio"]:checked:disabled+.catalog__control-mark::before {
-  background-color: $light-grey;
-}
-
-/* Отключаем ховер для disabled */
-.catalog__control-input[type="radio"]:not(:disabled):hover+.catalog__control-mark,
-.catalog__control-input[type="radio"]:not(:disabled):focus-visible+.catalog__control-mark {
-  border-color: $primary-lighter;
-
-}
-
-.catalog__control-input[type="radio"]:not(:disabled):hover+.catalog__control-mark::before,
-.catalog__control-input[type="radio"]:not(:disabled):focus-visible+.catalog__control-mark::before {
-  background-color: $primary-opacity;
-}
-
-.catalog__control-input[type="radio"]:checked+.catalog__control-mark {
+.catalog__control-input[type="radio"]:checked + .catalog__control-mark {
   border-color: $base-primary;
 
   &::before {
@@ -268,12 +190,29 @@
   }
 }
 
-.catalog__control-input[type="radio"]:checked+.catalog__control-mark:hover::before,
-.catalog__control-input[type="radio"]:checked:focus-visible+.catalog__control-mark::before {
-  background-color: $base-primary;
+.catalog__control-input[type="radio"]:disabled + .catalog__control-mark {
+  background-color: transparent;
+  border-color: $light-grey;
+  cursor: not-allowed;
 }
 
-// ?? невероное поведение - hover checked
+.catalog__control-input[type="radio"]:disabled ~ .catalog__control-label {
+  color: $base-grey;
+}
+
+.catalog__control-input[type="radio"]:checked:disabled + .catalog__control-mark::before {
+  background-color: $light-grey;
+}
+
+.catalog__control-input[type="radio"]:not(:disabled):hover + .catalog__control-mark,
+.catalog__control-input[type="radio"]:not(:disabled):focus-visible + .catalog__control-mark {
+  border-color: $primary-lighter;
+}
+
+.catalog__control-input[type="radio"]:not(:disabled):hover + .catalog__control-mark::before,
+.catalog__control-input[type="radio"]:not(:disabled):focus-visible + .catalog__control-mark::before {
+  background-color: $primary-opacity;
+}
 
 .catalog__control--checkbox {
   padding-left: 52px;
@@ -291,7 +230,6 @@
   border: none;
   transition: background-color 0.3s ease, padding 0.3s ease;
 
-  /* Псевдоэлемент для "внутреннего круга" переключателя */
   &::before {
     content: "";
     position: absolute;
@@ -305,11 +243,7 @@
   }
 }
 
-.catalog__control-input[type="checkbox"]+.catalog__control-mark-checkbox {
-  background-color: $base-grey;
-}
-
-.catalog__control-input[type="checkbox"]:checked+.catalog__control-mark-checkbox {
+.catalog__control-input[type="checkbox"]:checked + .catalog__control-mark-checkbox {
   background-color: $base-primary;
 
   &::before {
@@ -317,9 +251,8 @@
   }
 }
 
-.catalog__control-input[type="checkbox"]:disabled+.catalog__control-mark-checkbox {
+.catalog__control-input[type="checkbox"]:disabled + .catalog__control-mark-checkbox {
   background-color: $light-grey;
-  /* Цвет для отключенного состояния */
   cursor: not-allowed;
 
   &::before {
@@ -327,35 +260,7 @@
   }
 }
 
-.catalog__control-input[type="checkbox"]:disabled:checked+.catalog__control-mark-checkbox {
-  background-color: $light-grey;
-  cursor: not-allowed;
-
-  &::before {
-    transform: translateX(18px);
-    background-color: $base-grey;
-  }
-}
-
-/* Стили для hover */
-.catalog__control-input[type="checkbox"]+.catalog__control-mark-checkbox:hover {
-  padding: 0;
-  /* Убираем паддинг при наведении */
-  border: 2px solid $primary-lighter;
-  /* Добавляем рамку */
-  background-color: $primary-opacity;
-
-  &::before {
-    background-color: $base-white;
-    transform: none;
-    /* Убираем трансформацию, если она не нужна */
-    top: 0;
-    left: 0;
-  }
-}
-
-/* Стили для checked состояния */
-.catalog__control-input[type="checkbox"]:checked+.catalog__control-mark-checkbox:hover {
+.catalog__control-input[type="checkbox"]:checked + .catalog__control-mark-checkbox:hover {
   background-color: $base-primary;
 
   &::before {
@@ -364,10 +269,7 @@
   }
 }
 
-/* Стили для focus */
-.catalog__control-input[type="checkbox"]:focus-visible+.catalog__control-mark-checkbox {
-  // outline: 2px solid $primary-lighter;
-  // outline-offset: 4px;
+.catalog__control-input[type="checkbox"]:focus-visible + .catalog__control-mark-checkbox {
   padding: 0;
   background-color: $primary-opacity;
   border: 2px solid $primary-lighter;
@@ -379,53 +281,7 @@
   }
 }
 
-/* Стили для hover, если чекбокс уже отмечен */
-.catalog__control-input[type="checkbox"]:checked+.catalog__control-mark-checkbox:hover {
-  background-color: $base-primary;
-
-  s &::before {
-    background-color: $base-white;
-  }
-}
-
-.catalog__control-input[type="checkbox"]:checked:focus-visible+.catalog__control-mark-checkbox {
-  // outline: 2px solid $primary-lighter;
-  // outline-offset: 4px;
-  /* Расстояние рамки от активного чекбокса */
-
-  &::before {
-    background-color: $base-white;
-    /* Цвет внутреннего круга при фокусе на активный чекбокс */
-  }
-}
-
-/* Отключенное состояние чекбокса */
-.catalog__control-input[type="checkbox"]:disabled+.catalog__control-mark-checkbox {
-  background-color: $light-grey;
-  cursor: not-allowed;
-
-  &::before {
-    background-color: $bg-lightest-grey;
-    top: 2px;
-    left: 2px;
-    /* Сброс положения псевдоэлемента для disabled */
-    transform: none;
-  }
-}
-
-/* Отключенное и отмеченное состояние чекбокса */
-.catalog__control-input[type="checkbox"]:disabled:checked+.catalog__control-mark-checkbox {
-  background-color: $light-grey;
-  cursor: not-allowed;
-
-  &::before {
-    transform: translateX(18px);
-    background-color: $base-grey;
-  }
-}
-
-/* Отключаем hover для disabled чекбоксов */
-.catalog__control-input[type="checkbox"]:disabled+.catalog__control-mark-checkbox:hover {
+.catalog__control-input[type="checkbox"]:disabled + .catalog__control-mark-checkbox:hover {
   background-color: $light-grey;
   cursor: not-allowed;
   border: none;
@@ -433,7 +289,6 @@
   &::before {
     top: 2px;
     left: 2px;
-    /* Оставляем псевдоэлемент на месте */
     background-color: $bg-lightest-grey;
     transform: none;
   }
@@ -444,8 +299,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   gap: 20px;
   margin-bottom: 40px;
 
@@ -453,7 +307,6 @@
     flex-flow: row wrap;
     gap: 30px;
     justify-content: center;
-
   }
 }
 
@@ -467,8 +320,8 @@
   &::after {
     position: absolute;
     content: "";
-    width: 10;
-    height: 10;
+    width: 10px;
+    height: 10px;
     background-image: url("../../icons/stack.svg#select-arrow");
     top: 50%;
     transform: translateY(-50%);
@@ -477,7 +330,6 @@
 
   @media (min-width: $desktop-width) {
     justify-content: flex-end;
-
   }
 }
 
@@ -490,24 +342,12 @@
 }
 
 .catalog__select {
-  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  -webkit-appearance: none;
   appearance: none;
-  color: $base-primary;
-  margin: 0;
-  display: flex;
-  border: none;
-  padding: 4px 30px 4px 9px; // пересмотреть
-  width: 165px; // может убрать
-  justify-content: space-between;
-  background-color: transparent;
+  background-color: $base-white;
+  padding: 4px;
+  border: 2px solid $light-grey;
+  border-radius: 6px;
+  font-family: "Montserrat Regular", "Arial", sans-serif;
   cursor: pointer;
-}
-
-.catalog__pagination {
-  @media (min-width: $tablet-width) {
-    margin-left: auto;
-  }
+  width: 160px;
 }

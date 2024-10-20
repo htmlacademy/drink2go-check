@@ -1,8 +1,7 @@
 .header {
   background-color: $base-white;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   margin: 0 auto;
   width: 100%;
   min-height: 60px;
@@ -31,16 +30,13 @@
 .header__wrapper {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
 
   @media (min-width: $tablet-width) {
     justify-content: unset;
-
   }
-
 }
 
 .header__link--logo {
@@ -49,7 +45,6 @@
 
   @media (min-width: $desktop-width) {
     margin-right: 20px;
-
   }
 }
 
@@ -80,7 +75,6 @@
   letter-spacing: 0.02em;
   color: $base-black;
 
-
   @media (min-width: $tablet-width) {
     width: 82px;
     height: 36px;
@@ -92,14 +86,13 @@
 
     &:hover {
       color: $base-primary;
-
     }
+
     &:active {
       color: $base-primary;
       background-color: $base-secondary;
     }
   }
-
 }
 
 .header__link--user {
@@ -115,11 +108,12 @@
   &::before {
     position: absolute;
     content: "";
-    mask-image:url("../../icons/stack.svg#user");
+    mask-image: url("../../icons/stack.svg#user");
     display: block;
     background-color: $base-black;
     width: 16px;
     height: 16px;
+
     @media (min-width: $desktop-width) {
       left: 20px;
     }
@@ -137,9 +131,10 @@
 }
 
 .header__link--user:active::before,
-.header__link--user:hover::before  {
+.header__link--user:hover::before {
   @media (min-width: $desktop-width) {
-  background-color: $base-primary; }
+    background-color: $base-primary;
+  }
 }
 
 .header__link--cart {
@@ -151,7 +146,7 @@
   &::before {
     position: absolute;
     content: "";
-    mask-image: url("../../icons/stack.svg#cart");;
+    mask-image: url("../../icons/stack.svg#cart");
     display: block;
     background-color: $base-black;
     width: 16px;
@@ -174,14 +169,14 @@
   @media (min-width: $desktop-width) {
     width: unset;
     padding: 32px 20px 32px 43px;
-
   }
 }
 
 .header__link--cart:active::before,
 .header__link--cart:hover::before {
   @media (min-width: $desktop-width) {
-  background-color: $base-primary; }
+    background-color: $base-primary;
+  }
 }
 
 .header__link-icon--text {
@@ -216,7 +211,6 @@
   height: 2px;
   width: 16px;
   background-color: $base-black;
-  transition: transform 0.3s ease;
   position: relative;
   transition: transform 0.3s ease;
 
@@ -245,13 +239,11 @@
   top: 0;
   background-color: transparent;
 
-
   &::before {
     transform: rotate(45deg);
     top: 50%;
     transform-origin: center;
     background-color: $base-black;
-
   }
 
   &::after {
@@ -259,6 +251,5 @@
     top: 50%;
     transform-origin: center;
     background-color: $base-black;
-
   }
 }

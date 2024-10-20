@@ -5,8 +5,9 @@
 
 .range__slider {
   height: 4px;
-  margin: 9px 0 34px 0;
+  margin: 9px 0 34px;
   border: none;
+  background-color: $light-grey;
 }
 
 .noui-connect {
@@ -25,7 +26,6 @@
   @media (min-width: $desktop-width) {
     width: 318px;
   }
-
 }
 
 .noui-horizontal .noui-handle {
@@ -102,11 +102,4 @@
   @media (min-width: $desktop-width) {
     width: 134px;
   }
-
-}
-
-.range__slider {
-  height: 4px;
-  margin: 9px 0 34px 0;
-  background-color: $light-grey;
 }

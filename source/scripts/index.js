@@ -94,6 +94,3 @@ if (rangeSlider) {
     });
   });
 }
-
-
-

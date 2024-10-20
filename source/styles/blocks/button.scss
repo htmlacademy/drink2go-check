@@ -10,7 +10,7 @@
   text-decoration: none;
   min-width: 113px;
   min-height: 39px;
-  padding: 9px 0 7px 0;
+  padding: 9px 0 7px;
   transition: background-color 0.3s ease;
   border: none;
   cursor: pointer;
@@ -39,13 +39,11 @@
   &:hover {
     background-color: $primary-lighter;
     color: $base-white;
-
   }
 
   &:active {
     background-color: $primary-darker;
     color: $base-white;
-
   }
 
   &:disabled {
@@ -62,5 +60,4 @@
   padding: 15px;
   background-color: $base-white;
   line-height: unset;
-
 }
