@@ -314,7 +314,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  gap: 8px;
+  gap: 12px;
   margin-bottom: 16px;
 
   &::after {
@@ -343,11 +343,14 @@
 
 .catalog__select {
   appearance: none;
-  background-color: $base-white;
   padding: 4px;
-  border: 2px solid $light-grey;
   border-radius: 6px;
-  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
   cursor: pointer;
   width: 160px;
+  border: none;
+  background-color: $bg-lightest-grey;
+  color: $base-primary;
+  font-size: 16px;
+  line-height: 24px;
 }

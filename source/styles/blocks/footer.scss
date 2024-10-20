@@ -3,7 +3,7 @@
 }
 
 .footer__wrapper {
-  padding-top: 17px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -37,12 +37,14 @@
   @media (min-width: $desktop-width) {
     flex-flow: column wrap;
     justify-content: unset;
+
   }
 }
 
 .footer__header-logo-wrapper {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 10px;
@@ -55,7 +57,7 @@
   line-height: 20px;
   letter-spacing: 0.02em;
   color: $base-primary;
-  margin: 0 0 17px;
+  margin: 0 0 17px 0;
 }
 
 .footer__main-list {
@@ -63,7 +65,8 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   gap: 17px;
 }
 
@@ -92,7 +95,7 @@
 }
 
 .footer__main-primary-item {
-  padding: 20px 0 28px;
+  padding: 20px 0 28px 0;
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -104,7 +107,7 @@
     min-width: 317px;
   }
 
-  &::before {
+  &:before {
     position: absolute;
     content: "";
     height: 1px;

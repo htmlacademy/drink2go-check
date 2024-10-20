@@ -86,7 +86,7 @@ if (rangeSlider) {
     connect: true,
     range: {
       min: 0,
-      max: 1000
+      max: 1040
     },
 
     cssPrefix: 'noui-'

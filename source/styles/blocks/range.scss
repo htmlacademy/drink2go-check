@@ -1,11 +1,12 @@
 .range {
   display: flex;
   flex-flow: column wrap;
+  margin-bottom: 1px;
 }
 
 .range__slider {
-  height: 4px;
-  margin: 9px 0 34px;
+  height: 3px;
+  margin: 9px 0 35px 7px;
   border: none;
   background-color: $light-grey;
 }
@@ -32,7 +33,6 @@
   width: 24px;
   height: 24px;
   top: -10px;
-
   background-color: $base-white;
   border: 2px solid $primary-lighter;
   border-radius: 50%;
