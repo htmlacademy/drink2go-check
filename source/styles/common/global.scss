@@ -1,1 +1,16 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  color: $base-black;
+  background-color: $bg-lightest-grey;
+  margin: 0 auto;
+  width: 100%;
+
+}

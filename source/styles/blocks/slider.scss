@@ -1,0 +1,337 @@
+.slider {
+  // position: relative;
+  height: 100%;
+
+}
+
+.slider__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.slider__item {
+  display: none;
+  padding: 0;
+  min-height: 656px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+
+  }
+}
+
+.slider__item--decaf {
+  background-color: $bg-flat-white;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $bg-flat-white 640px, $base-white 640px);
+  }
+  @media (min-width: $desktop-width) {
+    background-image: none;
+    background-color: $bg-flat-white ;
+  }
+}
+
+.slider__item--lavender {
+  background-color: $bg-lavender-latte;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $bg-lavender-latte 640px, $base-white 640px);
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+    background-color: $bg-lavender-latte;
+  }
+
+}
+
+.slider__item--triple {
+  background-color: $bg-espresso;
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, $bg-espresso 640px, $base-white 640px);
+  }
+  @media (min-width: $desktop-width) {
+    background-image: none;
+    background-color: $bg-espresso;
+  }
+}
+
+
+.slider__item--current {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.slider__item-inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 20px 0 60px 0;
+
+
+@media (min-width: $tablet-width) {
+  padding: 60px 0 0 0;}
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    padding: 30px 0 60px 0;
+
+  }
+}
+
+
+.slider__item-image {
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+.slider__picture {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    order: 0;
+
+  }
+}
+
+.slider__new-label {
+  margin: 0 0 4px 0;
+  padding: 0;
+  text-transform: uppercase;
+  color: $base-primary;
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.slider__title {
+  margin: 0 0 10px 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  font-family: "Montserrat Bold", "Arial", sans-serif;
+  letter-spacing: 0.02em;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 16px 0;
+    padding: 0;
+    font-size: 56px;
+    line-height: 80px;
+
+  }
+  @media (min-width: $desktop-width) {
+
+
+  }
+}
+
+.slider__description-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px 0;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin:  180px 0 0;
+    padding: 0;
+    align-items: start;
+
+  }
+}
+
+.slider__description {
+  text-align: center;
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  width: 280px;
+  margin: 0 0 20px 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    font-size: 20px;
+    line-height: 32px;
+    width: 608px;
+  }
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin: 0 0 40px 0;
+
+  }
+
+}
+
+.slider__buy {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 5px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.slider__old-price {
+  margin: 0;
+  padding: 1px 4px 0 1px;
+  font-size: 16px;
+  line-height: 32px;
+  color: $base-primary;
+  text-decoration: line-through;
+}
+
+.slider__price {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 600;
+  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  margin-right: 20px;
+  letter-spacing: 0.02em;
+}
+
+.slider__pagination {
+  display: none;
+}
+
+
+.slider__arrow--right {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 20px;
+  top: 0;
+  right: 0px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    mask-image: url("../../icons/stack.svg#arrow-right");
+    display: block;
+    background-color: $base-primary;
+    width: 11px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    // top: 0;
+    // bottom: 317px;
+
+    @media (min-width: $tablet-width) {
+      // top: 310px;
+    }
+  }
+
+  &:hover {
+    background-image: linear-gradient(to left, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(to left, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 640px;
+    // right: 30px;
+    width: 80px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+  height: 100%;
+}
+
+}
+
+.slider__arrow--left {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 20px;
+  top: 0;
+  left: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    mask-image: url("../../icons/stack.svg#arrow-left");
+    display: block;
+    background-color: $base-primary;
+    width: 11px;
+    height: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media (min-width: $tablet-width) {
+      top: 310px;
+    }
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background-image: linear-gradient(to right, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled {
+    //поменять цвет стрелки
+    cursor: not-allowed;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 640px;
+    // left: 30px;
+    width: 80px;
+
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 100%;
+  }
+}

@@ -1,0 +1,110 @@
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  position: relative;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-color: $base-grey;
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+}
+
+.social-list__item--vk::before {
+  mask-image: url("../../icons//stack.svg#vk");
+}
+.social-list__item--pinterest::before {
+  mask-image: url("../../icons//stack.svg#pinterest");
+}
+
+.social-list__item--ok::before {
+mask-image: url("../../icons//stack.svg#ok");
+}
+
+.social-list__item--vk:hover::before,
+.social-list__item--pinterest:hover::before,
+.social-list__item--ok:hover::before {
+  background-color: $base-primary;
+}
+
+.social-list__link {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  // position: relative;
+  cursor: pointer;
+
+  // &::before {
+  //   position: absolute;
+  //   content: "";
+  //   background-color: $base-grey;
+  //   width: 20px;
+  //   height: 20px;
+  // }
+}
+
+
+
+// .social-list__link--vk::before {
+//   mask-image: url("../../icons//stack.svg#vk");
+// }
+
+// .social-list__link--vk:hover::before {
+//   background-color: $base-primary;
+// }
+
+// .social-list__link--pinterest::before {
+//   mask-image: url("../../icons//stack.svg#pinterest");
+// }
+// .social-list__link--pinterest:hover::before {
+//   background-color: $base-primary;
+// }
+// .social-list__link--ok::before {
+//   mask-image: url("../../icons//stack.svg#ok");
+// }
+// .social-list__link--ok:hover::before {
+//   background-color: $base-primary;
+// }
+
+// .social-list__link {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   position: relative;
+
+
+// &::before {
+//   position: absolute;
+//   content: "";
+//   mask-image: url("../../icons//stack.svg#vk");
+//   background-color: blue;
+//   width: 20px;
+//   height: 20px;
+
+// }

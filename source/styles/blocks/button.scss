@@ -1,0 +1,66 @@
+.button {
+  display: block;
+  font-family: "Montserrat Regular", "Arial", sans-serif;
+  background-color: $base-primary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: $base-white;
+  text-decoration: none;
+  min-width: 113px;
+  min-height: 39px;
+  padding: 9px 0 7px 0;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+    cursor: not-allowed;
+  }
+}
+
+
+.button--reset {
+  color: $base-primary;
+  background-color: $base-white;
+
+  &:hover {
+    background-color: $primary-lighter;
+    color: $base-white;
+
+  }
+
+  &:active {
+    background-color: $primary-darker;
+    color: $base-white;
+
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: $base-white;
+    cursor: not-allowed;
+  }
+}
+
+.button-pagination {
+  min-width: unset;
+  width: 40px;
+  height: 40px;
+  padding: 15px;
+  background-color: $base-white;
+  line-height: unset;
+
+}
