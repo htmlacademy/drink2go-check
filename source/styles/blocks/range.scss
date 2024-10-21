@@ -95,9 +95,11 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
   }
+
   @media (min-width: $tablet-width) {
     gap: 49px;
   }
+
   @media (min-width: $desktop-width) {
     gap: 50px;
   }

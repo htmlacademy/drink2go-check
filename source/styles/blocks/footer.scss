@@ -39,14 +39,12 @@
   @media (min-width: $desktop-width) {
     flex-flow: column wrap;
     justify-content: unset;
-
   }
 }
 
 .footer__header-logo-wrapper {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 5px;
@@ -59,7 +57,7 @@
   line-height: 20px;
   letter-spacing: 0.02em;
   color: $base-primary;
-  margin: 0 0 17px 0;
+  margin: 0 0 17px;
 }
 
 .footer__main-list {
@@ -67,8 +65,7 @@
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: column wrap;
   gap: 17px;
 }
 
@@ -82,6 +79,16 @@
   letter-spacing: 0.02em;
   margin: 0;
   padding: 0;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+
+  }
 }
 
 .footer__main-wrapper {
@@ -104,14 +111,13 @@
     border: none;
     min-width: 222px;
     padding: 10px 0 28px;
-
   }
 
   @media (min-width: $desktop-width) {
     min-width: 317px;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     height: 1px;
@@ -151,7 +157,6 @@
 }
 
 .footer__main-item {
-  // padding-left: 20px;
   cursor: pointer;
 }
 
@@ -196,11 +201,9 @@
   top: 5px;
 }
 
-
 .footer__contacts-phone::before {
   background-image: url("../../icons/stack.svg#phone");
 }
-
 
 .footer__developer {
   display: flex;
@@ -220,9 +223,7 @@
   @media (min-width: $desktop-width) {
     margin: 0 auto;
     padding: 0 0 40px;
-
   }
-
 }
 
 .footer__developer-link {
