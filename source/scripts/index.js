@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-//slider
+//hero slider
 document.addEventListener('DOMContentLoaded', () => {
   const sliderItems = document.querySelectorAll('.slider__item');
   const paginationIndicators = document.querySelectorAll('.slider__indicator');
@@ -20,30 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextArrow = document.querySelector('.slider__arrow--right');
   let currentSlideIndex = 0;
 
-  // Функция для обновления состояния слайдов и пагинации
   function updateSlider() {
-    // Скрыть все слайды
-    sliderItems.forEach((item, index) => {
+    sliderItems.forEach((item) => {
       item.classList.remove('slider__item--current');
     });
 
-    // Убрать активные состояния пагинации
     paginationIndicators.forEach((indicator) => {
       indicator.classList.remove('slider__indicator--active');
     });
 
-    // Показать текущий слайд
     sliderItems[currentSlideIndex].classList.add('slider__item--current');
 
-    // Активировать текущий индикатор
     paginationIndicators[currentSlideIndex].classList.add('slider__indicator--active');
 
-    // Отключаем кнопки если мы на первом или последнем слайде
+    // Для совпадения с макетом состояния disabled закомментированы
     // prevArrow.disabled = currentSlideIndex === 0;
     // nextArrow.disabled = currentSlideIndex === sliderItems.length - 1;
   }
 
-  // Обработчик для кнопки "Предыдущий слайд"
   prevArrow.addEventListener('click', () => {
     if (currentSlideIndex > 0) {
       currentSlideIndex--;
@@ -51,7 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Обработчик для кнопки "Следующий слайд"
   nextArrow.addEventListener('click', () => {
     if (currentSlideIndex < sliderItems.length - 1) {
       currentSlideIndex++;
@@ -59,7 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Обработчики для клика на пагинацию
   paginationIndicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
       currentSlideIndex = index;
@@ -67,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Инициализация слайдера при загрузке
   updateSlider();
 });
 
@@ -92,14 +83,15 @@ if (rangeSlider) {
 
   const inputs = [inputMin, inputMax];
 
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
+  rangeSlider.noUiSlider.on('update', (values, handle) => {
     inputs[handle].value = Math.round(values[handle]);
   });
+
 
   inputs.forEach((input, index) => {
     input.addEventListener('change', function () {
       const value = Number(this.value);
-      let values = [null, null];
+      const values = [null, null];
       values[index] = value;
       rangeSlider.noUiSlider.set(values);
     });

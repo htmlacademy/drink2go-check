@@ -1,6 +1,14 @@
 .hero {
   margin: 0;
   position: relative;
+
+    @media (min-width: $tablet-width) {
+      height: 828px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 714px;
+}
 }
 
 .hero__wrapper {
