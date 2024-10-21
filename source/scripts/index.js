@@ -1,5 +1,3 @@
-/* в этот файл добавляет скрипты*/
-
 //nav
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.header__toggle-iconline');

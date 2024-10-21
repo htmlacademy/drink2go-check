@@ -20,18 +20,8 @@
   display: none;
   padding: 0;
   width: 100%;
-
   min-height: auto;
-  /* Allow the slider items to grow dynamically */
   height: auto;
-  // @media (min-width: $tablet-width) {
-  //   min-height: 828px;
-  // }
-
-  // @media (min-width: $desktop-width) {
-  //   min-height: 714px;
-  //   height: 714px;
-  // }
 }
 
 .slider__item--decaf {
@@ -83,7 +73,6 @@
 .slider__item-inner {
   display: flex;
   flex-direction: column;
-  // position: relative;
   padding-top: 20px;
   padding-bottom: 60px;
 

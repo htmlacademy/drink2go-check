@@ -12,7 +12,6 @@
     position: static;
     flex-flow: row wrap;
     margin: 0;
-    // margin-right: 60px;
     padding: 0;
     z-index: 0;
     background-color: transparent;
@@ -98,7 +97,7 @@
   cursor: pointer;
 
   &:hover {
-    color: $base-primary; //  перенести ли только с таблета?
+    color: $base-primary;
   }
 
   @media (min-width: $tablet-width) {
