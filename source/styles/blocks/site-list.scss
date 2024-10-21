@@ -6,6 +6,15 @@
   line-height: 16px;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+
   @media (max-width: $mobile-width-only) {
     padding: 20px 0;
     outline-offset: unset;

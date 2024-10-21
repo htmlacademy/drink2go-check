@@ -50,6 +50,10 @@
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.06vw;
+
+  @media (min-width: $desktop-width) {
+    letter-spacing: 0.05vw;
+  }
 }
 
 .features__list {
@@ -68,8 +72,9 @@
     align-items: normal;
     display: grid;
     grid-template-columns: repeat(4, 317px);
+    // grid-template-columns:  317px 315px 316px 317px;
     column-gap: 31px;
-    margin-top: 108px;
+    margin-top: 107px;
   }
 }
 
@@ -117,6 +122,7 @@
 
   @media (min-width: $desktop-width) {
     text-align: center;
+    margin: 0 0 5px;
   }
 }
 
