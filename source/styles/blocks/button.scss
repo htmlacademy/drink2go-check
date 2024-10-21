@@ -51,8 +51,20 @@
     color: $base-white;
     cursor: not-allowed;
   }
+
+  @media (min-width: $tablet-width) {
+    min-width: 113px;
+    width: 116px;
+  }
 }
 
+.button--apply {
+  @media (min-width: $tablet-width) {
+    min-width: 113px;
+    width: 137px;
+    margin-right: 10px;
+  }
+}
 .button-pagination {
   min-width: unset;
   width: 40px;

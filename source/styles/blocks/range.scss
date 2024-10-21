@@ -9,6 +9,11 @@
   margin: 9px 0 35px 7px;
   border: none;
   background-color: $light-grey;
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin: 9px 0 31px 7px;
+
+  }
 }
 
 .noui-connect {
@@ -21,7 +26,8 @@
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
-    max-width: 223px;
+    max-width: 209px;
+    height: 4px;
   }
 
   @media (min-width: $desktop-width) {
@@ -53,6 +59,10 @@
   &::before {
     display: none;
   }
+
+  @media (min-width: $tablet-width) {
+    // left: 10px;
+  }
 }
 
 .noui-handle:hover::after,
@@ -79,6 +89,10 @@
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
+  }
+  @media (min-width: $tablet-width) {
+    gap: 49px;
+
   }
 }
 

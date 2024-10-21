@@ -3,7 +3,7 @@
   margin-bottom: 43px;
 
   @media (min-width: $tablet-width) {
-    padding: 80px 0 0;
+    padding: 79px 0 0;
   }
 }
 
@@ -48,7 +48,7 @@
 
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
-    gap: 30px;
+    gap: unset;
   }
 
   @media (min-width: $desktop-width) {
@@ -65,13 +65,16 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin: 0 auto;
+    margin: 39 auto 0;
+    width: 276px;
+    gap: 12px;
+    padding: 0;
   }
 }
 
 .catalog__filter-button {
   @media (min-width: $tablet-width) {
-    width: 137px;
+    // padding: 9px 20px 7px;
   }
 
   @media (min-width: $desktop-width) {
@@ -353,4 +356,16 @@
   color: $base-primary;
   font-size: 16px;
   line-height: 24px;
+}
+
+.catalog__filter-price {
+  @media (min-width: $tablet-width) {
+    margin-right: 23px;
+  }
+}
+
+.catalog__filter-milk  {
+  @media (min-width: $tablet-width) {
+    margin-right: 42px;
+  }
 }

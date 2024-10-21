@@ -257,6 +257,7 @@
   @media (min-width: $tablet-width) {
     height: 640px;
     width: 80px;
+    right: calc(50vw - 385px);
   }
 
   @media (min-width: $desktop-width) {
@@ -315,6 +316,7 @@
   @media (min-width: $tablet-width) {
     height: 640px;
     width: 80px;
+    left: calc(50vw - 385px);
   }
 
   @media (min-width: $desktop-width) {

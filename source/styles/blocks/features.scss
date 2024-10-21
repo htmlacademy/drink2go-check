@@ -4,7 +4,7 @@
   background-color: $base-white;
 
   @media (min-width: $tablet-width) {
-    padding: 50px 10px 100px;
+    padding: 50px 0 100px;
   }
 
   @media (min-width: $desktop-width) {
@@ -54,6 +54,7 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     gap: 50px 30px;
+    padding: 0 10px;
   }
 
   @media (min-width: $desktop-width) {
