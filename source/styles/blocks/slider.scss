@@ -203,7 +203,7 @@
 
 .slider__old-price {
   margin: 0;
-  padding: 1px 4px 0 1px;
+  padding: 1px 3px 0 1px;
   font-size: 16px;
   line-height: 32px;
   color: $base-primary;
@@ -228,7 +228,7 @@
   height: 100%;
   width: 20px;
   top: 0;
-  right: 0;
+  right: calc(50vw - 160px);
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -278,7 +278,7 @@
   height: 100%;
   width: 20px;
   top: 0;
-  left: 0;
+  left: calc(50vw - 160px);
   border: none;
   background-color: transparent;
   cursor: pointer;

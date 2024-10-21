@@ -6,7 +6,7 @@
   <title>Название проекта</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preload" href="#" type="font/woff2" as="font">
-  <link rel="stylesheet" href="./vendor/no-ui-slider/nouislider.min.css">
+  <!-- <link rel="stylesheet" href="./vendor/no-ui-slider/nouislider.min.css"> -->
   <link rel="stylesheet" href="styles/styles.css">
 
   <script src="scripts/index.js" defer></script>
@@ -527,25 +527,21 @@
       </div>
     </section>
 
-    <article class="location">
+    <section class="location">
       <h2 class="location__titile visually-hidden">Наш адрес на карте</h2>
       <picture>
-        <source type="image/webp" media="(min-width: 1440px)"
-          srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
-        <source type="image/webp" media="(min-width: 768px)"
-          srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="480">
-        <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320"
-          height="420">
+        <source type="image/webp" media="(min-width: 769px)" srcset="images/map-desktop@1x.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="540">
+        <source type="image/png" media="(min-width: 769px)" srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="540">
 
-        <source type="image/png" media="(min-width: 1440px)"
-          srcset="images/map-desktop@1x.png 1x, images/map-desktop@2x.png 2x" width="1440" height="540">
-        <source type="image/png" media="(min-width: 768px)"
-          srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="480">
-        <img class="location__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320"
-          height="420" alt="Мы на карте">
+        <source type="image/webp" media="(min-width: 321px) and (max-width: 768px)" srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="480">
+        <source type="image/png" media="(min-width: 321px) and (max-width: 768px)" srcset="images/map-tablet@1x.png 1x, images/map-tablet@2x.png 2x" width="768" height="480">
 
+        <source type="image/webp" media="(max-width: 320px)" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320" height="420">
+        <source type="image/png" media="(max-width: 320px)" srcset="images/map-mobile@1x.png 1x, images/map-mobile@2x.png 2x" width="320" height="420">
+
+        <img class="location__image" src="images/map-mobile@1x.png" srcset="images/map-mobile@2x.png 2x" width="320" height="420" alt="Мы на карте">
       </picture>
-    </article>
+    </section>
   </main>
 
   <footer class="footer">
@@ -555,7 +551,7 @@
         <div class="footer__header-logo-wrapper">
           <a class="footer__header-logo" href="#">
             <picture>
-              <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170"
+                <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170"
                 height="36">
               <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-desktop.svg" width="170"
                 height="36">
