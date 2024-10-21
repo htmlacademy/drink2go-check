@@ -262,6 +262,7 @@
 
   @media (min-width: $desktop-width) {
     height: 714px;
+    right: calc(50vw - 721px);
   }
 
   &:disabled {
@@ -321,6 +322,7 @@
 
   @media (min-width: $desktop-width) {
     height: 714px;
+    left: calc(50vw - 721px);
   }
 }
 

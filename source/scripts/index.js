@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
 //slider
 document.addEventListener('DOMContentLoaded', () => {
   const sliderItems = document.querySelectorAll('.slider__item');
@@ -72,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация слайдера при загрузке
   updateSlider();
 });
-
 
 
 //noUiSlider

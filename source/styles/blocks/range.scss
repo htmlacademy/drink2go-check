@@ -9,10 +9,15 @@
   margin: 9px 0 35px 7px;
   border: none;
   background-color: $light-grey;
+
   @media (min-width: $tablet-width) {
     width: 223px;
     margin: 9px 0 31px 7px;
+  }
 
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    margin: 9px 0 33px 7px;
   }
 }
 
@@ -92,7 +97,9 @@
   }
   @media (min-width: $tablet-width) {
     gap: 49px;
-
+  }
+  @media (min-width: $desktop-width) {
+    gap: 50px;
   }
 }
 

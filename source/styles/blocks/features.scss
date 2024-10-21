@@ -22,6 +22,9 @@
   margin: 0 0 5px;
   padding: 0;
   letter-spacing: 0.04em;
+
+  @media (min-width: $desktop-width) {
+  margin: 0 0 4px 0;}
 }
 
 .features__subtitle {
@@ -39,7 +42,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 80px;
+    margin-bottom: 81px;
   }
 }
 
@@ -59,6 +62,7 @@
 
   @media (min-width: $desktop-width) {
     gap: 30px;
+    padding: 0;
   }
 }
 
