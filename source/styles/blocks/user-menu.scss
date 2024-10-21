@@ -20,10 +20,6 @@
   @media (max-width: $mobile-width-only) {
     width: 230px;
   }
-
-  @media (min-width: $tablet-width) {
-    // width: 180px;
-  }
 }
 
 .user-menu__item {
@@ -75,7 +71,6 @@
     mask-image: url("../../icons/header/cart.svg");
   }
 }
-
 
 .user-menu__cart::before,
 .user-menu__enter::before {

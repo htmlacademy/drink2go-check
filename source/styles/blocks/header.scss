@@ -1,7 +1,3 @@
-.header {
-  background-color: $white;
-}
-
 .header__wrapper {
   @media (max-width: $mobile-width-only) {
     position: relative;
@@ -30,25 +26,20 @@
 }
 
 .header__logo-wrapper {
-  @media (min-width: $tablet-width) {
-    // width: 145px;
-  }
-
   @media (min-width: $desktop-width) {
-    // min-width: 130px;
     display: flex;
     align-items: center;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .header__text-title-desktop {
+  .header__slogan-desktop {
     margin-left: 20px;
     width: 132px;
   }
 }
 
-.header__text-title-desktop--hidden {
+.header__slogan-desktop--hidden {
   display: none;
 
   @media (min-width: $desktop-width) {
@@ -131,7 +122,6 @@
   .header--nojs .main-nav__wrapper {
     position: static;
     min-height: 0;
-    // display: block;
   }
 }
 

@@ -1,4 +1,4 @@
-/* в этот файл добавляет скрипты*/
+/* Menu*/
 const header = document.querySelector('.header');
 const headerToggle = document.querySelector('.js-toggle-button');
 

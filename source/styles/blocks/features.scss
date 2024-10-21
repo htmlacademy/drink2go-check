@@ -1,14 +1,7 @@
-// .features {
-//   // @media (min-width: $desktop-width) {
-//   //   width: 1140px;
-//   //   padding: 50px 40px;
-//   // }
-// }
-
 .features__wrapper {
   margin: 0 auto;
   width: 320px;
-  padding: 58px 20px;
+  padding: 57px 20px;
   display: flex;
   flex-direction: column;
 
@@ -24,9 +17,8 @@
 
 .features__title {
   min-width: 280px;
-  // min-height: 72px;
   display: flex;
-  margin: 4px auto 0;
+  margin: 5px auto 0;
   color: $base-black;
   font-family: $montserrat-bold;
   font-size: 24px;
@@ -46,7 +38,6 @@
     margin-bottom: 50px;
     font-size: 40px;
     letter-spacing: 0.09vw;
-
   }
 }
 
@@ -58,7 +49,7 @@
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.51px;
+  letter-spacing: 0.06vw;
 }
 
 .features__list {
@@ -70,19 +61,15 @@
   @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: 368px 363px;
-    margin-top: 62px;
+    margin-top: 63px;
   }
 
   @media (min-width: $desktop-width) {
     align-items: normal;
     display: grid;
-    align-items: stretch;
-    // justify-content: center;
     grid-template-columns: repeat(4, 317px);
-    // grid-template-columns:  318px 300px 305px 300px;
     column-gap: 31px;
     margin-top: 108px;
-
   }
 }
 
@@ -100,7 +87,7 @@
     display: flex;
     flex-direction: column;
     padding: 0 25px 0 83px;
-    margin: 0 0 56px;
+    margin: 0 0 57px;
   }
 
   @media (min-width: $desktop-width) {
@@ -117,7 +104,6 @@
 
   @media (max-width: $mobile-width-only) {
     min-width: 75px;
-    // padding: 0 20px;
     margin: 10px 0 1px;
     text-align: center;
   }
@@ -133,16 +119,6 @@
     text-align: center;
   }
 }
-
-// .features__grid-tablet {
-//   @media (min-width: $tablet-width) {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     padding: 0 25px;
-//   }
-
-// }
 
 .features__icon {
   @media (max-width: $mobile-width-only) {
@@ -164,6 +140,8 @@
 
   &--speed::before {
     @include features-icon-base-styles;
+    // top: -10px;
+    // left: 10;
     background-image: url("../../icons/features/clock.svg");
   }
 
@@ -174,6 +152,8 @@
 
   &--energy::before {
     @include features-icon-base-styles;
+    // top: -15px;
+    // left: 10;
     background-image: url("../../icons/features/lightning.svg");
   }
 
