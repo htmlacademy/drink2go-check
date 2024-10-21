@@ -4,6 +4,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 79px 0 0;
+    margin-bottom: 90px;
   }
 }
 
@@ -73,10 +74,6 @@
 }
 
 .catalog__filter-button {
-  @media (min-width: $tablet-width) {
-    // padding: 9px 20px 7px;
-  }
-
   @media (min-width: $desktop-width) {
     width: 149px;
   }
@@ -308,8 +305,9 @@
 
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
-    gap: 30px;
+    gap: 30px 29px;
     justify-content: center;
+    margin-bottom: 70px;
   }
 }
 
@@ -329,10 +327,18 @@
     top: 50%;
     transform: translateY(-50%);
     right: 7px;
+    @media (min-width: $tablet-width) {
+      right: 10px;
+      top: 48%;
+      transform: translateY(-48%);
+    }
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     justify-content: flex-end;
+    margin-bottom: 25px;
+    gap: 13px;
+
   }
 }
 
