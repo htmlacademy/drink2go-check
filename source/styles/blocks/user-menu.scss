@@ -1,0 +1,95 @@
+.user-menu__list {
+  @include list-reset;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-family: $montserrat-medium;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    min-width: 260px;
+  }
+}
+
+
+.user-menu {
+  @media (max-width: $mobile-width-only) {
+    width: 230px;
+  }
+}
+
+.user-menu__item {
+  display: flex;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 120px;
+  }
+}
+
+.user-menu__item a {
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
+}
+
+.user-menu__link {
+  display: flex;
+  align-items: center;
+}
+
+.user-menu__cart-text--hidden,
+.user-menu__enter-text--hidden {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}
+
+.user-menu__enter {
+  @media (min-width: $desktop-width) {
+    min-width: 124px;
+  }
+
+  &::before {
+    @include user-menu-base-styles;
+    mask-image: url("../../icons/header/enter.svg");
+  }
+}
+
+.user-menu__enter::before:hover {
+  background-color: $primary-lighter;
+}
+
+.user-menu__cart {
+  @media (min-width: $desktop-width) {
+    min-width: 100px;
+  }
+
+  &::before {
+    @include user-menu-base-styles;
+    mask-image: url("../../icons/header/cart.svg");
+  }
+}
+
+.user-menu__cart::before,
+.user-menu__enter::before {
+  @media (min-width: $desktop-width) {
+    margin-right: 10px;
+  }
+}
