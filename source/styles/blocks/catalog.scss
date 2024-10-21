@@ -14,7 +14,8 @@
 }
 
 .catalog__title {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   margin: 0 0 5px;
   padding: 0;
   font-size: 12px;
@@ -30,7 +31,8 @@
 }
 
 .catalog__subtitle {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   margin: 0 0 20px;
   padding: 0;
   font-size: 24px;
@@ -81,7 +83,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    margin: 39 auto 0;
+    margin: 39px auto 0;
     width: 276px;
     gap: 12px;
     padding: 0;
@@ -116,7 +118,8 @@
 }
 
 .catalog__filter-title {
-  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 20px;
@@ -370,7 +373,8 @@
 }
 
 .catalog__select-title {
-  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   margin: 0;
@@ -381,7 +385,8 @@
   appearance: none;
   padding: 4px;
   border-radius: 6px;
-  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
   cursor: pointer;
   width: 160px;
   border: none;

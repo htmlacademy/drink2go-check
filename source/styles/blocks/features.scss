@@ -15,7 +15,8 @@
 .features__title {
   color: $base-primary;
   text-transform: uppercase;
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
@@ -29,7 +30,8 @@
 }
 
 .features__subtitle {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   text-align: center;
@@ -126,8 +128,8 @@
     left: 0;
     top: 0;
     transform: none;
-    width: 52px; //??
-    height: 56px; // ??
+    width: 52px;
+    height: 56px;
   }
 
   @media (min-width: $desktop-width) {
@@ -169,7 +171,8 @@
 }
 
 .features__item-title {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 18px;
   line-height: 32px;
   text-align: center;

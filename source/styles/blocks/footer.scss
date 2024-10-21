@@ -52,7 +52,8 @@
 }
 
 .footer__main-title {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.02em;
@@ -73,7 +74,8 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $base-black;
-  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
@@ -87,7 +89,6 @@
 
   &:active {
     color: $primary-darker;
-
   }
 }
 
@@ -162,7 +163,7 @@
 
 .footer__contacts-adress,
 .footer__contacts-phone {
-  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   padding-left: 19px;

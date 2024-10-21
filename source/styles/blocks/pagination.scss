@@ -89,7 +89,7 @@
   display: block;
   text-decoration: none;
   color: $base-primary;
-  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   width: 100%;
   height: 100%;
   font-size: 16px;
@@ -112,7 +112,8 @@
 
 .pagination__link--current {
   color: $base-black;
-  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 600;
 }
 
 .pagination__button--tablet {
