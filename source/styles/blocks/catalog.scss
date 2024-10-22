@@ -395,8 +395,10 @@
   font-size: 16px;
   line-height: 24px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $base-secondary;
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {

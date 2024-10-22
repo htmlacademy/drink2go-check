@@ -41,6 +41,7 @@
   &:focus-visible {
     background-color: $primary-lighter;
     color: $base-white;
+    outline: none;
   }
 
   &:hover::before,
@@ -96,13 +97,19 @@
   line-height: 24px;
   padding: 8px;
   margin: 0;
+  border-radius: 4px;
 
-  &:hover {
+  &:hover,
+  &:focus  {
     color: $base-white;
+    background-color: $primary-lighter;
+    outline: none;
   }
 
   &:active {
     color: $base-white;
+    background-color: $primary-darker;
+
   }
 }
 

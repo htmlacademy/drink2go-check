@@ -51,6 +51,10 @@
   }
 }
 
+.footer__header-logo:focus {
+  outline: none;
+}
+
 .footer__main-title {
   font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 700;
@@ -85,6 +89,7 @@
   &:hover,
   &:focus {
     color: $primary-lighter;
+    outline: none;
   }
 
   &:active {
@@ -180,6 +185,12 @@
     height: 16px;
     top: 0;
     left: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+    outline: none;
   }
 }
 

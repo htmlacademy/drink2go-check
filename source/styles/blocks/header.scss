@@ -87,9 +87,12 @@
     width: 170px;
     height: 36px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $base-primary;
+      outline: none;
     }
+
 
     &:active {
       color: $base-primary;
@@ -134,9 +137,11 @@
 }
 
 .header__link--user:active::before,
-.header__link--user:hover::before {
+.header__link--user:hover::before,
+.header__link--user:focus::before {
   @media (min-width: $desktop-width) {
     background-color: $base-primary;
+    outline: none;
   }
 }
 
@@ -176,9 +181,11 @@
 }
 
 .header__link--cart:active::before,
-.header__link--cart:hover::before {
+.header__link--cart:hover::before,
+.header__link--cart:focus::before {
   @media (min-width: $desktop-width) {
     background-color: $base-primary;
+    outline: none;
   }
 }
 

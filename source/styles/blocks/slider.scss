@@ -82,7 +82,7 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    padding: 30px 105px 85px;
+    padding: 30px 105px 75px;
     gap: 30px;
   }
 }
@@ -91,6 +91,14 @@
 .slider__item-image {
   display: block;
   margin: 0 auto 10px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 10px;
+  }
 }
 
 .slider__picture {
@@ -234,8 +242,10 @@
     transform: translateX(-50%) translateY(-50%);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: linear-gradient(to left, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
   }
 
   &:active {
@@ -286,8 +296,10 @@
     transform: translateX(-50%) translateY(-50%);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
   }
 
   &:active {

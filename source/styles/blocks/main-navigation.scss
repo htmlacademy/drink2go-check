@@ -97,8 +97,10 @@
   padding: 20px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $base-primary;
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {

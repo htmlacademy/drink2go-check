@@ -36,7 +36,8 @@
     height: 20px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: $base-secondary;
   }
 
@@ -59,7 +60,10 @@
 
 .social-list__item--vk:hover::before,
 .social-list__item--pinterest:hover::before,
-.social-list__item--ok:hover::before {
+.social-list__item--ok:hover::before,
+.social-list__item--vk:focus-visible::before,
+.social-list__item--pinterest:focus-visible::before,
+.social-list__item--ok:focus-visible::before {
   background-color: $base-primary;
 }
 
@@ -69,4 +73,9 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $base-secondary;
+  }
 }

@@ -16,9 +16,10 @@
   cursor: pointer;
   border-radius: 4px;
 
-
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $primary-lighter;
+    outline: none;
   }
 
   &:active {
@@ -36,9 +37,11 @@
   color: $base-primary;
   background-color: $base-white;
 
-  &:hover {
+  &:hover,
+  &:focus  {
     background-color: $primary-lighter;
     color: $base-white;
+    outline: none;
   }
 
   &:active {
@@ -64,6 +67,13 @@
     width: 137px;
     margin-right: 10px;
   }
+
+  &:hover,
+  &:focus  {
+    background-color: $primary-darker;
+    color: $base-white;
+    outline: none;
+  }
 }
 
 .button-pagination {
@@ -73,4 +83,11 @@
   padding: 15px;
   background-color: $base-white;
   line-height: unset;
+
+  &:hover,
+  &:focus  {
+    background-color: $primary-darker;
+    color: $base-white;
+    outline: none;
+}
 }

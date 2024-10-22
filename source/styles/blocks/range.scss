@@ -50,6 +50,10 @@
   cursor: pointer;
   padding: 2px;
 
+  &:focus  {
+    outline: none;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -64,15 +68,12 @@
   &::before {
     display: none;
   }
-
-  @media (min-width: $tablet-width) {
-    // left: 10px;
-  }
 }
 
 .noui-handle:hover::after,
 .noui-handle:focus::after {
   background-color: $primary-opacity;
+  outline: none;
 }
 
 .noui-handle:active::after {
@@ -122,6 +123,10 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+
+  &:focus {
+    outline: 2px solid $primary-darker;
+  }
 
   @media (min-width: $tablet-width) {
     width: 87px;
