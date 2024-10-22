@@ -100,7 +100,7 @@
   border-radius: 4px;
 
   &:hover,
-  &:focus  {
+  &:focus {
     color: $base-white;
     background-color: $primary-lighter;
     outline: none;
@@ -109,7 +109,6 @@
   &:active {
     color: $base-white;
     background-color: $primary-darker;
-
   }
 }
 

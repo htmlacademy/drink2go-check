@@ -38,7 +38,7 @@
   background-color: $base-white;
 
   &:hover,
-  &:focus  {
+  &:focus {
     background-color: $primary-lighter;
     color: $base-white;
     outline: none;
@@ -69,7 +69,7 @@
   }
 
   &:hover,
-  &:focus  {
+  &:focus {
     background-color: $primary-darker;
     color: $base-white;
     outline: none;
@@ -85,9 +85,9 @@
   line-height: unset;
 
   &:hover,
-  &:focus  {
+  &:focus {
     background-color: $primary-darker;
     color: $base-white;
     outline: none;
-}
+  }
 }
