@@ -1,5 +1,4 @@
 .slider {
-  // position: relative;
   height: 100%;
 }
 
@@ -20,12 +19,9 @@
 .slider__item {
   display: none;
   padding: 0;
-  min-height: 656px;
   width: 100%;
-
-  @media (min-width: $tablet-width) {
-    min-height: 828px;
-  }
+  min-height: auto;
+  height: auto;
 }
 
 .slider__item--decaf {
@@ -67,7 +63,6 @@
   }
 }
 
-
 .slider__item--current {
   display: flex;
   flex-wrap: wrap;
@@ -78,8 +73,8 @@
 .slider__item-inner {
   display: flex;
   flex-direction: column;
-  position: relative;
-  padding: 20px 0 60px;
+  padding-top: 20px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     padding: 60px 0 0;
@@ -87,7 +82,8 @@
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    padding: 30px 0 60px;
+    padding: 30px 105px 75px;
+    gap: 30px;
   }
 }
 
@@ -95,6 +91,14 @@
 .slider__item-image {
   display: block;
   margin: 0 auto 10px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 10px;
+  }
 }
 
 .slider__picture {
@@ -112,7 +116,8 @@
   padding: 0;
   text-transform: uppercase;
   color: $base-primary;
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   letter-spacing: 0.04em;
   font-size: 12px;
   line-height: 16px;
@@ -128,7 +133,8 @@
   font-size: 36px;
   line-height: 48px;
   text-align: center;
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   letter-spacing: 0.02em;
 
   @media (min-width: $tablet-width) {
@@ -150,7 +156,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin: 180px 0;
+    margin: 150px 0 0;
     padding: 0;
     align-items: start;
   }
@@ -158,10 +164,11 @@
 
 .slider__description {
   text-align: center;
-  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  display: block;
   font-size: 14px;
   line-height: 20px;
-  width: 280px;
+  width: 281px;
   margin: 0 0 20px;
   padding: 0;
 
@@ -169,7 +176,7 @@
     padding: 0;
     font-size: 20px;
     line-height: 32px;
-    width: 608px;
+    width: 600px;
   }
 
   @media (min-width: $desktop-width) {
@@ -192,7 +199,7 @@
 
 .slider__old-price {
   margin: 0;
-  padding: 1px 4px 0 1px;
+  padding: 1px 3px 0 1px;
   font-size: 16px;
   line-height: 32px;
   color: $base-primary;
@@ -205,16 +212,11 @@
   padding: 0;
   font-size: 20px;
   line-height: 32px;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-weight: 600;
-  font-family: "Montserrat Semi Bold", "Arial", sans-serif;
   margin-right: 20px;
   letter-spacing: 0.02em;
 }
-
-.slider__pagination {
-  display: none;
-}
-
 
 .slider__arrow--right {
   position: absolute;
@@ -222,7 +224,7 @@
   height: 100%;
   width: 20px;
   top: 0;
-  right: 0;
+  right: calc(50vw - 160px);
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -236,11 +238,14 @@
     width: 11px;
     height: 20px;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: linear-gradient(to left, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
   }
 
   &:active {
@@ -250,10 +255,20 @@
   @media (min-width: $tablet-width) {
     height: 640px;
     width: 80px;
+    right: calc(50vw - 385px);
   }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    height: 714px;
+    right: calc(50vw - 721px);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $base-grey;
+    }
   }
 }
 
@@ -263,7 +278,7 @@
   height: 100%;
   width: 20px;
   top: 0;
-  left: 0;
+  left: calc(50vw - 160px);
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -277,15 +292,14 @@
     width: 11px;
     height: 20px;
     left: 50%;
-    transform: translateX(-50%);
-
-    @media (min-width: $tablet-width) {
-      top: 310px;
-    }
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-image: linear-gradient(to right, $base-white 0%, rgba(255, 255, 255, 0) 100%);
+    outline: none;
   }
 
   &:active {
@@ -293,15 +307,66 @@
   }
 
   &:disabled {
-    cursor: not-allowed; //поменять цвет стрелки
+    cursor: not-allowed;
+
+    &::before {
+      background-color: $base-grey;
+    }
   }
 
   @media (min-width: $tablet-width) {
     height: 640px;
     width: 80px;
+    left: calc(50vw - 385px);
   }
 
   @media (min-width: $desktop-width) {
-    height: 100%;
+    height: 714px;
+    left: calc(50vw - 721px);
+  }
+}
+
+.slider__pagination {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    content: "";
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 70px;
+  }
+}
+
+.slider__indicator {
+  display: block;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+  cursor: pointer;
+
+  &--active {
+    background-color: $base-primary;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+
+  &--active:hover,
+  &--active:focus {
+    background-color: $base-primary;
   }
 }

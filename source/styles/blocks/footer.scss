@@ -3,16 +3,18 @@
 }
 
 .footer__wrapper {
-  padding-top: 17px;
+  padding-top: 22px;
 
   @media (min-width: $tablet-width) {
     display: flex;
     flex-flow: column wrap;
+    padding-top: 42px;
   }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
-    gap: 30px;
+    gap: 62px;
+    padding-top: 40px;
   }
 }
 
@@ -21,7 +23,7 @@
 
   @media (min-width: $desktop-width) {
     display: block;
-    margin: 0 0 50px;
+    margin: 0 0 53px;
     padding: 0;
     font-size: 14px;
     line-height: 20px;
@@ -32,7 +34,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 0 0 20px;
+  padding: 0 0 18px;
 
   @media (min-width: $desktop-width) {
     flex-flow: column wrap;
@@ -45,12 +47,17 @@
   flex-flow: row wrap;
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 
+.footer__header-logo:focus {
+  outline: none;
+}
+
 .footer__main-title {
-  font-family: "Montserrat Bold", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.02em;
@@ -71,12 +78,23 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $base-black;
-  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
   margin: 0;
   padding: 0;
+
+  &:hover,
+  &:focus {
+    color: $primary-lighter;
+    outline: none;
+  }
+
+  &:active {
+    color: $primary-darker;
+  }
 }
 
 .footer__main-wrapper {
@@ -87,17 +105,18 @@
   @media (min-width: $tablet-width) {
     display: flex;
     flex-flow: row wrap;
-    gap: 30px;
+    gap: 31px;
   }
 }
 
 .footer__main-primary-item {
-  padding: 20px 0 28px;
+  padding: 21px 0 28px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     border: none;
     min-width: 222px;
+    padding: 10px 0 28px;
   }
 
   @media (min-width: $desktop-width) {
@@ -120,11 +139,12 @@
 }
 
 .footer__main-primary-item:last-child {
-  padding-bottom: 20px;
+  padding-bottom: 21px;
   position: relative;
 
   @media (min-width: $tablet-width) {
     border: none;
+    margin-left: -1px;
   }
 
   &::after {
@@ -143,13 +163,12 @@
 }
 
 .footer__main-item {
-  // padding-left: 20px;
   cursor: pointer;
 }
 
 .footer__contacts-adress,
 .footer__contacts-phone {
-  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   padding-left: 19px;
@@ -183,16 +202,20 @@
   }
 }
 
+.footer__contacts-phone:hover,
+.footer__contacts-phone:focus {
+  color: $primary-lighter;
+  outline: none;
+}
+
 .footer__contacts-adress::before {
   background-image: url("../../icons/stack.svg#location");
   top: 5px;
 }
 
-
 .footer__contacts-phone::before {
   background-image: url("../../icons/stack.svg#phone");
 }
-
 
 .footer__developer {
   display: flex;
@@ -205,21 +228,20 @@
   line-height: 16px;
   color: $base-grey;
 
-  @media (min-width: $desktop-width) {
-    margin: 0 auto;
+  @media (min-width: $tablet-width) {
+    padding: 10px 0 40px;
   }
 
-  // @media (min-width: $tablet-width) {
-  //   padding: 0;
-  //   grid-column: 1/-1;
-  // }
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    padding: 0 0 40px;
+  }
 }
 
 .footer__developer-link {
   display: flex;
   align-items: center;
   margin-left: 3px;
-  // transition: 0.3s ease;
   color: $base-grey;
   text-decoration: none;
 

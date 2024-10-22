@@ -1,5 +1,6 @@
 /* GLOBAL */
 @import "./common/variables.scss";
+@import "./common/mixins.scss";
 @import "./common/global.scss";
 @import "./common/fonts.scss";
 @import "./common/visually-hidden.scss";
@@ -7,6 +8,7 @@
 
 /* BLOCKS */
 @import "./blocks/header.scss";
+@import "./blocks/main-container.scss";
 @import "./blocks/container.scss";
 @import "./blocks/main-navigation.scss";
 @import "./blocks/hero.scss";
@@ -20,3 +22,4 @@
 @import "./blocks/location.scss";
 @import "./blocks/footer.scss";
 @import "./blocks/social-list.scss";
+@import "../vendor/no-ui-slider/nouislider.min.css";

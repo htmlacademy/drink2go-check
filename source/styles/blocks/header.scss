@@ -52,14 +52,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-left: auto;
 
   @media (min-width: $tablet-width) {
-    margin-left: auto;
     min-width: 120px;
+    max-width: 180px;
   }
 
   @media (min-width: $desktop-width) {
     gap: 20px;
+    max-width: 280px;
   }
 }
 
@@ -69,7 +71,8 @@
   text-decoration: none;
   display: flex;
   text-transform: uppercase;
-  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.02em;
@@ -84,9 +87,12 @@
     width: 170px;
     height: 36px;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $base-primary;
+      outline: none;
     }
+
 
     &:active {
       color: $base-primary;
@@ -131,9 +137,11 @@
 }
 
 .header__link--user:active::before,
-.header__link--user:hover::before {
+.header__link--user:hover::before,
+.header__link--user:focus::before {
   @media (min-width: $desktop-width) {
     background-color: $base-primary;
+    outline: none;
   }
 }
 
@@ -153,7 +161,7 @@
     height: 16px;
 
     @media (min-width: $desktop-width) {
-      left: 20px;
+      left: 19px;
     }
   }
 
@@ -173,9 +181,11 @@
 }
 
 .header__link--cart:active::before,
-.header__link--cart:hover::before {
+.header__link--cart:hover::before,
+.header__link--cart:focus::before {
   @media (min-width: $desktop-width) {
     background-color: $base-primary;
+    outline: none;
   }
 }
 
@@ -241,14 +251,14 @@
 
   &::before {
     transform: rotate(45deg);
-    top: 50%;
+    top: 0;
     transform-origin: center;
     background-color: $base-black;
   }
 
   &::after {
     transform: rotate(-45deg);
-    top: 50%;
+    top: 0;
     transform-origin: center;
     background-color: $base-black;
   }

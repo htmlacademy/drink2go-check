@@ -1,6 +1,6 @@
 .button {
   display: block;
-  font-family: "Montserrat Regular", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
   background-color: $base-primary;
   font-weight: 400;
   font-size: 16px;
@@ -16,9 +16,10 @@
   cursor: pointer;
   border-radius: 4px;
 
-
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $primary-lighter;
+    outline: none;
   }
 
   &:active {
@@ -36,9 +37,11 @@
   color: $base-primary;
   background-color: $base-white;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $primary-lighter;
     color: $base-white;
+    outline: none;
   }
 
   &:active {
@@ -51,6 +54,26 @@
     color: $base-white;
     cursor: not-allowed;
   }
+
+  @media (min-width: $tablet-width) {
+    min-width: 113px;
+    width: 116px;
+  }
+}
+
+.button--apply {
+  @media (min-width: $tablet-width) {
+    min-width: 113px;
+    width: 137px;
+    margin-right: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $primary-darker;
+    color: $base-white;
+    outline: none;
+  }
 }
 
 .button-pagination {
@@ -60,4 +83,11 @@
   padding: 15px;
   background-color: $base-white;
   line-height: unset;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-darker;
+    color: $base-white;
+    outline: none;
+  }
 }

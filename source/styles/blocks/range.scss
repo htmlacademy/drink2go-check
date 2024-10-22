@@ -1,13 +1,24 @@
 .range {
   display: flex;
   flex-flow: column wrap;
+  margin-bottom: 1px;
 }
 
 .range__slider {
-  height: 4px;
-  margin: 9px 0 34px;
+  height: 3px;
+  margin: 9px 0 35px 7px;
   border: none;
   background-color: $light-grey;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    margin: 9px 0 31px 7px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 316px;
+    margin: 9px 0 33px 7px;
+  }
 }
 
 .noui-connect {
@@ -16,15 +27,16 @@
 }
 
 .noui-base {
-  width: 280px;
+  max-width: 280px;
   background-color: $light-grey;
 
   @media (min-width: $tablet-width) {
-    width: 223px;
+    max-width: 207px;
+    height: 4px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 318px;
+    max-width: 318px;
   }
 }
 
@@ -32,12 +44,15 @@
   width: 24px;
   height: 24px;
   top: -10px;
-
   background-color: $base-white;
   border: 2px solid $primary-lighter;
   border-radius: 50%;
   cursor: pointer;
   padding: 2px;
+
+  &:focus {
+    outline: none;
+  }
 
   &::after {
     position: absolute;
@@ -58,6 +73,7 @@
 .noui-handle:hover::after,
 .noui-handle:focus::after {
   background-color: $primary-opacity;
+  outline: none;
 }
 
 .noui-handle:active::after {
@@ -80,6 +96,14 @@
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
   }
+
+  @media (min-width: $tablet-width) {
+    gap: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 50px;
+  }
 }
 
 .range__divider {
@@ -94,6 +118,15 @@
   border-radius: 4px;
   border: solid 2px $primary-lighter;
   text-align: center;
+  color: $base-grey;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  &:focus {
+    outline: 2px solid $primary-darker;
+  }
 
   @media (min-width: $tablet-width) {
     width: 87px;
@@ -102,4 +135,8 @@
   @media (min-width: $desktop-width) {
     width: 134px;
   }
+}
+
+.range__input--max {
+  color: $base-black;
 }

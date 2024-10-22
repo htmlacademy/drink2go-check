@@ -1,5 +1,3 @@
-/* в этот файл добавляет скрипты*/
-
 //nav
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('.header__toggle-iconline');
@@ -8,58 +6,65 @@ document.addEventListener('DOMContentLoaded', () => {
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('main-navigation--open');
     menu.classList.toggle('main-navigation--closed');
-    menuToggle.classList.toggle('header__toggle-iconline--opened'); // убрала точку перед классом
+    menuToggle.classList.toggle('header__toggle-iconline--opened');
   });
 });
 
+//hero slider
+document.addEventListener('DOMContentLoaded', () => {
+  const sliderItems = document.querySelectorAll('.slider__item');
+  const paginationIndicators = document.querySelectorAll('.slider__indicator');
+  const prevArrow = document.querySelector('.slider__arrow--left');
+  const nextArrow = document.querySelector('.slider__arrow--right');
+  let currentSlideIndex = 0;
 
+  function updateSlider() {
+    sliderItems.forEach((item) => {
+      item.classList.remove('slider__item--current');
+    });
 
-//slider
-document.addEventListener('DOMContentLoaded', function() {
-  const sliderItems = document.querySelectorAll('.slider__item'); // Слайды
-  const prevButton = document.querySelector('.slider__arrow--left'); // Кнопка "Предыдущий слайд"
-  const nextButton = document.querySelector('.slider__arrow--right'); // Кнопка "Следующий слайд"
-  let currentSlide = 0;
+    paginationIndicators.forEach((indicator) => {
+      indicator.classList.remove('slider__indicator--active');
+    });
 
-  // Обновляем состояние кнопок
-  function updateButtons() {
-      if (currentSlide === 0) {
-          prevButton.disabled = true; // Блокируем кнопку "Назад" на первом слайде
-      } else {
-          prevButton.disabled = false;
-      }
+    sliderItems[currentSlideIndex].classList.add('slider__item--current');
+    paginationIndicators[currentSlideIndex].classList.add('slider__indicator--active');
 
-      if (currentSlide === sliderItems.length - 1) {
-          nextButton.disabled = true; // Блокируем кнопку "Вперед" на последнем слайде
-      } else {
-          nextButton.disabled = false;
-      }
+    // Для совпадения с макетом состояния disabled закомментированы
+    // prevArrow.disabled = currentSlideIndex === 0;
+    // nextArrow.disabled = currentSlideIndex === sliderItems.length - 1;
   }
 
-  // Перемещаем к предыдущему слайду
-  prevButton.addEventListener('click', function() {
-      if (currentSlide > 0) {
-          sliderItems[currentSlide].classList.remove('slider__item--current'); // Убираем класс активного слайда
-          currentSlide--; // Переходим на предыдущий слайд
-          sliderItems[currentSlide].classList.add('slider__item--current'); // Добавляем класс новому активному слайду
-          updateButtons(); // Обновляем состояние кнопок
-      }
+  prevArrow.addEventListener('click', () => {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      updateSlider();
+    }
   });
 
-  // Перемещаем к следующему слайду
-  nextButton.addEventListener('click', function() {
-      if (currentSlide < sliderItems.length - 1) {
-          sliderItems[currentSlide].classList.remove('slider__item--current'); // Убираем класс активного слайда
-          currentSlide++; // Переходим на следующий слайд
-          sliderItems[currentSlide].classList.add('slider__item--current'); // Добавляем класс новому активному слайду
-          updateButtons(); // Обновляем состояние кнопок
-      }
+  nextArrow.addEventListener('click', () => {
+    if (currentSlideIndex < sliderItems.length - 1) {
+      currentSlideIndex++;
+      updateSlider();
+    }
   });
 
-  // Инициализация начального состояния кнопок
-  updateButtons();
+  paginationIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentSlideIndex = index;
+      updateSlider();
+    });
+
+    indicator.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        currentSlideIndex = index;
+        updateSlider();
+      }
+    });
+  });
+
+  updateSlider();
 });
-
 
 //noUiSlider
 const rangeSlider = document.getElementById('range-slider');
@@ -72,7 +77,7 @@ if (rangeSlider) {
     connect: true,
     range: {
       min: 0,
-      max: 1000
+      max: 1040
     },
 
     cssPrefix: 'noui-'
@@ -81,14 +86,15 @@ if (rangeSlider) {
 
   const inputs = [inputMin, inputMax];
 
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
+  rangeSlider.noUiSlider.on('update', (values, handle) => {
     inputs[handle].value = Math.round(values[handle]);
   });
+
 
   inputs.forEach((input, index) => {
     input.addEventListener('change', function () {
       const value = Number(this.value);
-      let values = [null, null];
+      const values = [null, null];
       values[index] = value;
       rangeSlider.noUiSlider.set(values);
     });

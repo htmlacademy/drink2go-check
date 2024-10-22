@@ -12,7 +12,6 @@
     position: static;
     flex-flow: row wrap;
     margin: 0;
-    margin-right: 60px;
     padding: 0;
     z-index: 0;
     background-color: transparent;
@@ -21,6 +20,7 @@
 
   @media (min-width: $desktop-width) {
     margin: 0;
+    width: 500px;
   }
 }
 
@@ -45,7 +45,8 @@
 
 .main-navigation__item {
   flex: 1;
-  font-family: "Montserrat Medium", "Arial", sans-serif;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
   font-size: 12px;
   line-height: 16px;
   min-height: 57px;
@@ -74,8 +75,16 @@
 .main-navigation__item:first-child {
   border-top: solid 1px $base-secondary;
 
+
   @media (min-width: $tablet-width) {
     border: none;
+    margin-right: 1px;
+  }
+}
+
+.main-navigation__item:last-child {
+  @media (min-width: $tablet-width) {
+    margin-right: 0;
   }
 }
 
@@ -88,8 +97,10 @@
   padding: 20px;
   cursor: pointer;
 
-  &:hover {
-    color: $base-primary; //  перенести ли только с таблета?
+  &:hover,
+  &:focus {
+    color: $base-primary;
+    outline: none;
   }
 
   @media (min-width: $tablet-width) {
@@ -104,8 +115,8 @@
     &::before {
       position: absolute;
       content: "";
-      width: 100%;
-      right: 0;
+      width: 101%;
+      right: -1px;
       bottom: 0;
       height: 2px;
       background-color: $base-primary;
