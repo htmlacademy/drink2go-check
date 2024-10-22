@@ -1,4 +1,3 @@
-* Сайт: [Drink2Go](https://annetdev.github.io/Drink2go-grading/)
 # Сборка для HTML-курсов в HTML Academy
 
 Сборка работает на gulp 4 версии
