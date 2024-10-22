@@ -22,7 +22,7 @@
 <body class="page__body">
   <header class="header" data-test="header">
     <div class="header__wrapper container">
-      <a class="header__link header__link--logo" href="#">
+      <a class="header__link header__link--logo" href="index.html">
         <span class="visually-hidden">
           Логотип Drink2Go
         </span>
@@ -118,7 +118,7 @@
                 <div class="slider__buy">
                   <span class="slider__old-price">295₽</span>
                   <span class="slider__price">225₽</span>
-                  <a class="slider__button button " href="#catalog">Заказать</a>
+                  <a class="slider__button button" href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -158,7 +158,7 @@
                 <div class="slider__buy">
                   <span class="slider__old-price">285₽</span>
                   <span class="slider__price">265₽</span>
-                  <a class="slider__button button " href="#catalog">Заказать</a>
+                  <a class="slider__button button " href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -198,7 +198,7 @@
                 <div class="slider__buy">
                   <span class="slider__old-price">395₽</span>
                   <span class="slider__price">375₽</span>
-                  <a class="slider__button button " href="#catalog">Заказать</a>
+                  <a class="slider__button button " href="#">Заказать</a>
                 </div>
               </div>
             </div>
@@ -214,9 +214,9 @@
       </button>
 
       <div class="slider__pagination">
-        <div class="slider__indicator slider__indicator--active"></div>
-        <div class="slider__indicator"></div>
-        <div class="slider__indicator"></div>
+        <div class="slider__indicator slider__indicator--active" tabindex="0"></div>
+        <div class="slider__indicator" tabindex="0"></div>
+        <div class="slider__indicator" tabindex="0"></div>
       </div>
     </section>
 
@@ -403,7 +403,7 @@
             </div>
 
             <ul class="catalog__product-list">
-              <li class="catalog__product-item product-card">
+              <li class="catalog__product-item product-card" tabindex="0">
                 <a class="product-card__picture" href="#">
                   <picture>
                     <source type="image/webp" media="(min-width: 1440px)"
@@ -434,23 +434,27 @@
                 </div>
               </li>
 
-              <li class="catalog__product-item product-card product-card--current">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/item-2-desktop@1x.webp 1x, images/item-2-desktop@2x.webp 2x" width="130"
-                    height="188">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/item-2-tablet@1x.webp 1x, images/item-2-tablet@2x.webp 2x" width="130" height="188">
-                  <source type="image/webp" srcset="images/item-2-mobile@1x.webp 1x, images/item-2-mobile@2x.webp 2x"
-                    width="130" height="188">
+              <li class="catalog__product-item product-card product-card--current" tabindex="0">
+                <a class="product-card__picture" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="images/item-2-desktop@1x.webp 1x, images/item-2-desktop@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/item-2-tablet@1x.webp 1x, images/item-2-tablet@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" srcset="images/item-2-mobile@1x.webp 1x, images/item-2-mobile@2x.webp 2x"
+                      width="130" height="188">
 
-                  <source type="image/png" media="(min-width: 1440px)"
-                    srcset="images/item-2-desktop@1px.png 1x, images/item-2-desktop@2x.png 2x" width="130" height="188">
-                  <source type="image/png" media="(min-width: 768px)"
-                    srcset="images/item-2-tablet@1px.png 1x, images/item-2-tablet@2x.png 2x" width="130" height="188">
-                  <img class="product-card__image" src="images/item-2-mobile@1x.png"
-                    srcset="images/item-2-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
-                </picture>
+                    <source type="image/png" media="(min-width: 1440px)"
+                      srcset="images/item-2-desktop@1px.png 1x, images/item-2-desktop@2x.png 2x" width="130"
+                      height="188">
+                    <source type="image/png" media="(min-width: 768px)"
+                      srcset="images/item-2-tablet@1px.png 1x, images/item-2-tablet@2x.png 2x" width="130" height="188">
+                    <img class="product-card__image" src="images/item-2-mobile@1x.png"
+                      srcset="images/item-2-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
+                  </picture>
+                </a>
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                 <p class="product-card__decription">
                   Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
@@ -461,23 +465,27 @@
                 </div>
               </li>
 
-              <li class="catalog__product-item product-card">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/item-3-desktop@1x.webp 1x, images/item-3-desktop@2x.webp 2x" width="130"
-                    height="188">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/item-3-tablet@1x.webp 1x, images/item-3-tablet@2x.webp 2x" width="130" height="188">
-                  <source type="image/webp" srcset="images/item-3-mobile@1x.webp 1x, images/item-3-mobile@2x.webp 2x"
-                    width="130" height="188">
+              <li class="catalog__product-item product-card" tabindex="0">
+                <a class="product-card__picture" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="images/item-3-desktop@1x.webp 1x, images/item-3-desktop@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/item-3-tablet@1x.webp 1x, images/item-3-tablet@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" srcset="images/item-3-mobile@1x.webp 1x, images/item-3-mobile@2x.webp 2x"
+                      width="130" height="188">
 
-                  <source type="image/png" media="(min-width: 1440px)"
-                    srcset="images/item-3-desktop@1px.png 1x, images/item-3-desktop@2x.png 2x" width="130" height="188">
-                  <source type="image/png" media="(min-width: 768px)"
-                    srcset="images/item-3-tablet@1px.png 1x, images/item-3-tablet@2x.png 2x" width="130" height="188">
-                  <img class="product-card__image" src="images/item-3-mobile@1x.png"
-                    srcset="images/item-3-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
-                </picture>
+                    <source type="image/png" media="(min-width: 1440px)"
+                      srcset="images/item-3-desktop@1px.png 1x, images/item-3-desktop@2x.png 2x" width="130"
+                      height="188">
+                    <source type="image/png" media="(min-width: 768px)"
+                      srcset="images/item-3-tablet@1px.png 1x, images/item-3-tablet@2x.png 2x" width="130" height="188">
+                    <img class="product-card__image" src="images/item-3-mobile@1x.png"
+                      srcset="images/item-3-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
+                  </picture>
+                </a>
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                 <p class="product-card__decription">
                   Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
@@ -488,23 +496,27 @@
                 </div>
               </li>
 
-              <li class="catalog__product-item product-card">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/item-4-desktop@1x.webp 1x, images/item-4-desktop@2x.webp 2x" width="130"
-                    height="188">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/item-4-tablet@1x.webp 1x, images/item-4-tablet@2x.webp 2x" width="130" height="188">
-                  <source type="image/webp" srcset="images/item-4-mobile@1x.webp 1x, images/item-4-mobile@2x.webp 2x"
-                    width="130" height="188">
+              <li class="catalog__product-item product-card" tabindex="0">
+                <a class="product-card__picture" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="images/item-4-desktop@1x.webp 1x, images/item-4-desktop@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/item-4-tablet@1x.webp 1x, images/item-4-tablet@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" srcset="images/item-4-mobile@1x.webp 1x, images/item-4-mobile@2x.webp 2x"
+                      width="130" height="188">
 
-                  <source type="image/png" media="(min-width: 1440px)"
-                    srcset="images/item-4-desktop@1px.png 1x, images/item-4-desktop@2x.png 2x" width="130" height="188">
-                  <source type="image/png" media="(min-width: 768px)"
-                    srcset="images/item-4-tablet@1px.png 1x, images/item-4-tablet@2x.png 2x" width="130" height="188">
-                  <img class="product-card__image" src="images/item-4-mobile@1x.png"
-                    srcset="images/item-4-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
-                </picture>
+                    <source type="image/png" media="(min-width: 1440px)"
+                      srcset="images/item-4-desktop@1px.png 1x, images/item-4-desktop@2x.png 2x" width="130"
+                      height="188">
+                    <source type="image/png" media="(min-width: 768px)"
+                      srcset="images/item-4-tablet@1px.png 1x, images/item-4-tablet@2x.png 2x" width="130" height="188">
+                    <img class="product-card__image" src="images/item-4-mobile@1x.png"
+                      srcset="images/item-4-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
+                  </picture>
+                </a>
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                 <p class="product-card__decription">
                   Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
@@ -515,23 +527,27 @@
                 </div>
               </li>
 
-              <li class="catalog__product-item product-card">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/item-5-desktop@1x.webp 1x, images/item-5-desktop@2x.webp 2x" width="130"
-                    height="188">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/item-5-tablet@1x.webp 1x, images/item-5-tablet@2x.webp 2x" width="130" height="188">
-                  <source type="image/webp" srcset="images/item-5-mobile@1x.webp 1x, images/item-5-mobile@2x.webp 2x"
-                    width="130" height="188">
+              <li class="catalog__product-item product-card" tabindex="0">
+                <a class="product-card__picture" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="images/item-5-desktop@1x.webp 1x, images/item-5-desktop@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/item-5-tablet@1x.webp 1x, images/item-5-tablet@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" srcset="images/item-5-mobile@1x.webp 1x, images/item-5-mobile@2x.webp 2x"
+                      width="130" height="188">
 
-                  <source type="image/png" media="(min-width: 1440px)"
-                    srcset="images/item-5-desktop@1px.png 1x, images/item-5-desktop@2x.png 2x" width="130" height="188">
-                  <source type="image/png" media="(min-width: 768px)"
-                    srcset="images/item-5-tablet@1px.png 1x, images/item-5-tablet@2x.png 2x" width="130" height="188">
-                  <img class="product-card__image" src="images/item-5-mobile@1x.png"
-                    srcset="images/item-5-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
-                </picture>
+                    <source type="image/png" media="(min-width: 1440px)"
+                      srcset="images/item-5-desktop@1px.png 1x, images/item-5-desktop@2x.png 2x" width="130"
+                      height="188">
+                    <source type="image/png" media="(min-width: 768px)"
+                      srcset="images/item-5-tablet@1px.png 1x, images/item-5-tablet@2x.png 2x" width="130" height="188">
+                    <img class="product-card__image" src="images/item-5-mobile@1x.png"
+                      srcset="images/item-5-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
+                  </picture>
+                </a>
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                 <p class="product-card__decription">
                   Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
@@ -542,23 +558,27 @@
                 </div>
               </li>
 
-              <li class="catalog__product-item product-card">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)"
-                    srcset="images/item-6-desktop@1x.webp 1x, images/item-6-desktop@2x.webp 2x" width="130"
-                    height="188">
-                  <source type="image/webp" media="(min-width: 768px)"
-                    srcset="images/item-6-tablet@1x.webp 1x, images/item-6-tablet@2x.webp 2x" width="130" height="188">
-                  <source type="image/webp" srcset="images/item-6-mobile@1x.webp 1x, images/item-6-mobile@2x.webp 2x"
-                    width="130" height="188">
+              <li class="catalog__product-item product-card" tabindex="0">
+                <a class="product-card__picture" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)"
+                      srcset="images/item-6-desktop@1x.webp 1x, images/item-6-desktop@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" media="(min-width: 768px)"
+                      srcset="images/item-6-tablet@1x.webp 1x, images/item-6-tablet@2x.webp 2x" width="130"
+                      height="188">
+                    <source type="image/webp" srcset="images/item-6-mobile@1x.webp 1x, images/item-6-mobile@2x.webp 2x"
+                      width="130" height="188">
 
-                  <source type="image/png" media="(min-width: 1440px)"
-                    srcset="images/item-6-desktop@1px.png 1x, images/item-6-desktop@2x.png 2x" width="130" height="188">
-                  <source type="image/png" media="(min-width: 768px)"
-                    srcset="images/item-6-tablet@1px.png 1x, images/item-6-tablet@2x.png 2x" width="130" height="188">
-                  <img class="product-card__image" src="images/item-6-mobile@1x.png"
-                    srcset="images/item-6-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
-                </picture>
+                    <source type="image/png" media="(min-width: 1440px)"
+                      srcset="images/item-6-desktop@1px.png 1x, images/item-6-desktop@2x.png 2x" width="130"
+                      height="188">
+                    <source type="image/png" media="(min-width: 768px)"
+                      srcset="images/item-6-tablet@1px.png 1x, images/item-6-tablet@2x.png 2x" width="130" height="188">
+                    <img class="product-card__image" src="images/item-6-mobile@1x.png"
+                      srcset="images/item-6-mobile@2x.png" width="130" height="188" alt="Декаф Флэт Уайт">
+                  </picture>
+                </a>
                 <h3 class="product-card__title">Декаф Флэт Уайт</h3>
                 <p class="product-card__decription">
                   Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком
@@ -644,7 +664,7 @@
       <div class="footer__header ">
 
         <div class="footer__header-logo-wrapper">
-          <a class="footer__header-logo" href="#">
+          <a class="footer__header-logo" href="index.html">
             <picture>
               <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="170"
                 height="36">
@@ -659,17 +679,17 @@
         <p class="footer__header-text">Интернет-магазин кофейных напитков</p>
 
         <ul class="footer__social-list social-list">
-          <li class="social-list__item social-list__item--vk">
+          <li class="social-list__item social-list__item--vk" tabindex="0">
             <a class="social-list__link social-list__link--vk" href="#">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
-          <li class="social-list__item social-list__item--pinterest">
+          <li class="social-list__item social-list__item--pinterest" tabindex="0">
             <a class="social-list__link social-list__link--pinterest" href="#">
               <span class="visually-hidden">Pinterest</span>
             </a>
           </li>
-          <li class="social-list__item social-list__item--ok">
+          <li class="social-list__item social-list__item--ok" tabindex="0">
             <a class="social-list__link social-list__link--ok" href="#">
               <span class="visually-hidden">Одноклассники</span>
             </a>

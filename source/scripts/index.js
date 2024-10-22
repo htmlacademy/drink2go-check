@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     sliderItems[currentSlideIndex].classList.add('slider__item--current');
-
     paginationIndicators[currentSlideIndex].classList.add('slider__indicator--active');
 
     // Для совпадения с макетом состояния disabled закомментированы
@@ -55,11 +54,17 @@ document.addEventListener('DOMContentLoaded', () => {
       currentSlideIndex = index;
       updateSlider();
     });
+
+    indicator.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        currentSlideIndex = index;
+        updateSlider();
+      }
+    });
   });
 
   updateSlider();
 });
-
 
 //noUiSlider
 const rangeSlider = document.getElementById('range-slider');

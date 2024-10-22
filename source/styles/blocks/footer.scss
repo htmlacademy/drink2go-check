@@ -186,12 +186,6 @@
     top: 0;
     left: 0;
   }
-
-  &:hover,
-  &:focus {
-    color: $primary-lighter;
-    outline: none;
-  }
 }
 
 .footer__contacts-adress {
@@ -206,6 +200,12 @@
   @media (min-width: $desktop-width) {
     width: 298px;
   }
+}
+
+.footer__contacts-phone:hover,
+.footer__contacts-phone:focus {
+  color: $primary-lighter;
+  outline: none;
 }
 
 .footer__contacts-adress::before {

@@ -20,11 +20,20 @@
   &:hover,
   &:focus,
   &--current {
+    outline: none;
+
     @media (min-width: $desktop-width) {
       box-shadow: 0 5 15 0 rgba(0, 0, 0, 0.15);
       cursor: pointer;
+      outline: none;
     }
   }
+}
+
+.product-card__picture:hover,
+.product-card__picture:focus-visible {
+  opacity: 0.8;
+  outline: none;
 }
 
 .product-card__image {

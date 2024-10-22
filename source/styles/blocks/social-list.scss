@@ -39,6 +39,7 @@
   &:hover,
   &:focus-visible {
     background-color: $base-secondary;
+    outline: none;
   }
 
   &:active {
@@ -47,15 +48,15 @@
 }
 
 .social-list__item--vk::before {
-  mask-image: url("../../icons//stack.svg#vk");
+  mask-image: url("../../icons/stack.svg#vk");
 }
 
 .social-list__item--pinterest::before {
-  mask-image: url("../../icons//stack.svg#pinterest");
+  mask-image: url("../../icons/stack.svg#pinterest");
 }
 
 .social-list__item--ok::before {
-  mask-image: url("../../icons//stack.svg#ok");
+  mask-image: url("../../icons/stack.svg#ok");
 }
 
 .social-list__item--vk:hover::before,
@@ -65,6 +66,7 @@
 .social-list__item--pinterest:focus-visible::before,
 .social-list__item--ok:focus-visible::before {
   background-color: $base-primary;
+  outline: none;
 }
 
 .social-list__link {
