@@ -1,0 +1,13 @@
+plugins:
+  - linthtml-rules-htmlacademy
+rules:
+  htmlacademy/img-svg-req-dimensions:
+  - true
+  tag-req-attr:
+  - true
+  - img:
+    - name: width
+    - name: height
+  - svg:
+    - name: width
+    - name: height
