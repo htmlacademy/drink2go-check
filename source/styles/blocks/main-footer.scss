@@ -1,0 +1,233 @@
+.main-footer {
+  margin: 0;
+}
+
+.main-footer__info {
+  padding: 20px 20px 28px;
+  border-top: 1px solid $base-secondary-lilac;
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    padding: 0 20px;
+    padding-left: 0;
+    width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    padding: 0;
+  }
+}
+
+.main-footer__name {
+  @include font($primary-font, 14px, 20px, $base-color-lilac);
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 18px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 19px;
+  }
+}
+
+.main-footer__container {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 54px 20px 0 1px;
+    gap: 30px;
+    max-width: 1011px;
+    margin: 0;
+    margin-left: 20px;
+    height: 235px;
+  }
+}
+
+.main-footer__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-footer__item-info {
+  @include font($primary-font, 12px, 16px, $base-color);
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  max-width: 270px;
+}
+
+.main-footer__item-contacts {
+  @include font($primary-font, 14px, 20px, $base-color);
+  font-weight: 400;
+  text-decoration: none;
+  max-width: 270px;
+
+  @media (min-width: $desktop-width) {
+    width: 317px;
+  }
+}
+
+.main-footer__item {
+  margin-bottom: 18px;
+}
+
+.main-footer__item:last-child {
+  margin-bottom: 0;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 38px;
+  margin: 25px 20px 19px;
+
+  @media (min-width: $tablet-width) {
+    margin: 45px 20px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 45px 10px 96px 41px;
+  }
+}
+
+.main-footer__container-desktop {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1440px;
+    min-height: 297px;
+    gap: 30px;
+  }
+}
+
+.main-footer__developed {
+  @include font($primary-font, 12px, 16px, $grey-color);
+  font-weight: 400;
+  margin-right: 3px;
+}
+
+.main-footer__copyright {
+  @include font($primary-font, 12px, 16px, $grey-color);
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+}
+
+.main-footer__copyright:hover {
+  color: $base-color-lilac;
+}
+
+.main-footer__copyright:focus-visible {
+  color: $base-color-lilac;
+}
+
+.main-footer__copyright:active {
+  color: $primary-dark-color;
+}
+
+.main-footer__developed-info {
+  max-width: 320px;
+  padding: 20px 27px 30px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  border-top: 1px solid $base-secondary-lilac;
+
+  @media (min-width: $tablet-width) {
+    padding: 37px 0 40px;
+    margin: 0 auto;
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -50px;
+    padding: 0;
+  }
+}
+
+.main-footer__item-info--img {
+  display: flex;
+  gap: 6px;
+}
+
+.main-footer__item-list {
+  margin-bottom: 17px;
+}
+
+.main-footer__item-list:last-child {
+  margin-bottom: 0;
+}
+
+.main-footer__info-contacts {
+  padding: 21px 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 223px;
+    padding: 0;
+  }
+}
+
+.main-footer__item-contacts--adress::before {
+  content: "";
+  text-transform: none;
+  width: 19px;
+  height: 16px;
+  background-color: $base-color-lilac;
+  mask-image: url("../../icons/stack.svg#address");
+  mask-repeat: no-repeat;
+  mask-position: left;
+
+  @media (min-width: $tablet-width) {
+    width: 30px;
+  }
+}
+
+.main-footer__item-contacts--adress {
+  display: flex;
+  gap: 6px;
+}
+
+.main-footer__item-contacts--adress:hover::before {
+  opacity: 0.3;
+}
+
+.main-footer__item-contacts--adress:focus-visible::before {
+  opacity: 0.3;
+}
+
+.main-footer__item-contacts--info {
+  display: flex;
+  gap: 6px;
+}
+
+.main-footer__item-contacts--info::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 16px;
+  background-color: $base-color-lilac;
+  mask-image: url("../../icons/stack.svg#phone");
+  mask-repeat: no-repeat;
+  mask-position: left;
+}
+
+.main-footer__item-contacts--info:hover::before {
+  opacity: 0.3;
+}
+
+.main-footer__item-contacts--info:focus-visible::before {
+  opacity: 0.3;
+}

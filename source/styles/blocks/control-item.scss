@@ -1,0 +1,19 @@
+.control-item {
+  padding-top: 12px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 6px;
+  }
+}
+
+.control-item:first-child {
+  padding-top: 0;
+}
+
+.control-item--switch {
+  margin-bottom: 9px;
+}

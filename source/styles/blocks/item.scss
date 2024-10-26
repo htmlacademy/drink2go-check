@@ -1,0 +1,77 @@
+.item__button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -6px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 20px;
+    margin-top: -10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.item__button-catalog {
+  @include font($primary-font, 16px, 24px, $white-color);
+  font-weight: 400;
+  width: 280px;
+  margin: 0 auto;
+  border: none;
+  background-color: $base-color-lilac;
+  border-radius: 4px;
+  padding: 8px 0;
+
+  @media (min-width: $tablet-width) {
+    width: 137px;
+    margin-left: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    width: 149px;
+  }
+}
+
+.item__button-reset {
+  @include font($primary-font, 16px, 24px, $base-color-lilac);
+  font-weight: 400;
+  width: 280px;
+  margin: 0 auto;
+  border: none;
+  background-color: $white-color;
+  border-radius: 4px;
+  padding: 8px 24px 0 5px;
+
+  @media (min-width: $tablet-width) {
+    width: 137px;
+    margin-right: 246px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+  }
+}
+
+.item__button-reset:hover {
+  background-color: $primary-light-color;
+  color: $white-color;
+}
+
+.item__button-reset:focus-visible {
+  background-color: $primary-light-color;
+  color: $white-color;
+}
+
+.item__button-reset:active {
+  background-color: $primary-dark-color;
+  color: $white-color;
+}
+
+.item__button-reset:disabled {
+  background-color: $light-grey;
+  color: $white-color;
+}

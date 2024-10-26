@@ -1,0 +1,33 @@
+.map {
+  margin: 0;
+  display: block;
+  margin-bottom: -4px;
+  max-height: 420px;
+
+  @media (min-width: $tablet-width) {
+    max-height: 480px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-height: 540px;
+  }
+}
+
+.map img {
+  max-height: 420px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    max-height: 480px;
+    height: 100%;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-height: 540px;
+    height: 100%;
+    width: 100%;
+  }
+}

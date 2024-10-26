@@ -1,0 +1,42 @@
+.catalog-filter {
+  margin: 0;
+  border: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 220px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+  }
+}
+
+.catalog-filter__title {
+  @include font($primary-font, 16px, 24px, $base-color);
+  font-weight: 600;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    padding-left: -3px;
+  }
+}
+
+.catalog-filter__title-control {
+  list-style-type: none;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-filter__title-country {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 12px;
+  }
+}

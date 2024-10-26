@@ -1,0 +1,23 @@
+.copyright::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 16px;
+  background-color: $grey-color;
+  mask-image: url("../../icons/stack.svg#html-academy");
+  mask-repeat: no-repeat;
+  mask-position: right;
+  transform: translate(4px);
+}
+
+.copyright:hover::after {
+  background-color: $base-color-lilac;
+}
+
+.copyright:hover:focus-visible::after {
+  background-color: $base-color-lilac;
+}
+
+.copyright:active::after {
+  background-color: $primary-dark-color;
+}

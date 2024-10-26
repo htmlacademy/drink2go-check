@@ -1,0 +1,54 @@
+@mixin font-face($font-family, $font-weight, $font-style, $font-src, $font-src-reserve) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+    src: $font-src, $font-src-reserve;
+  }
+}
+
+@mixin font($font-family, $font-size, $line-height, $text-color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $text-color;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin icon {
+  content: "";
+  top: 2;
+  left: 0;
+  width: 13px;
+  height: 16px;
+  position: absolute;
+  mask-repeat: no-repeat;
+  mask-size: 13px 16px;
+  background-color: $base-color-lilac;
+  display: block;
+}

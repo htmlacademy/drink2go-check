@@ -1,0 +1,81 @@
+.catalog__item {
+  list-style-type: none;
+  max-width: 280px;
+  min-height: 420px;
+  text-align: center;
+  background-color: $white-color;
+
+  @media (min-width: $tablet-width) {
+    max-width: 349px;
+    min-height: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 317px;
+    min-height: 460px;
+  }
+}
+
+.catalog {
+  background-color: $bacground-light-grey;
+}
+
+.catalog__list {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  @media (min-width: $tablet-width) {
+    gap: 25px 22px;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 45px;
+  }
+}
+
+.catalog__list-card {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-bottom: 15px;
+    margin-left: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__wrapper {
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.catalog__form {
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}

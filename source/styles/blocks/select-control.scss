@@ -1,0 +1,83 @@
+.select-control {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 280px;
+  margin-top: 52px;
+  margin-bottom: 19px;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    margin: 44px 20px 30px 472px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 47px 0 0 760px;
+  }
+}
+
+.select-control__name {
+  @include font($primary-font, 16px, 24px, $base-color);
+  font-weight: 600;
+  margin: 0;
+  width: 107px;
+}
+
+.select-control__sorting {
+  @include font($primary-font, 16px, 24px, $base-color-lilac);
+  font-weight: 600;
+  width: 170px;
+  padding-left: 10px;
+  border: none;
+  background-color: $bacground-light-grey;
+  appearance: none;
+  cursor: pointer;
+}
+
+.select-control__arrow {
+  position: relative;
+  width: 164px;
+}
+
+.select-control__arrow::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: $base-color-lilac;
+  mask-image: url("../../icons/stack.svg#select-arrow-down");
+  right: 11px;
+  transform: translateY(8px);
+}
+
+.select-control__sorting:hover {
+  background-color: $base-secondary-lilac;
+}
+
+.select-control__sorting:focus-visible {
+  background-color: $base-secondary-lilac;
+}
+
+.select-control__sorting:active {
+  background-color: $white-color;
+}
+
+.select-control__option {
+  @include font($primary-font, 14px, 24px, $base-color-lilac);
+  font-weight: 600;
+  background-color: $white-color;
+}
+
+.select-control__arrow:active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: $base-color-lilac;
+  mask-image: url("../../icons/stack.svg#select-arrow-top");
+  right: 11px;
+  transform: translateY(8px);
+}

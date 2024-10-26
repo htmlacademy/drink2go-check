@@ -1,0 +1,85 @@
+.price-container__label {
+  position: relative;
+}
+
+.price-container__input::-webkit-outer-spin-button,
+.price-container__input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.price-container__input {
+  @include font($primary-font, 16px, 24px, $base-color);
+  font-weight: 500;
+  text-align: center;
+  width: 118px;
+  height: 40px;
+  border-radius: 4px;
+  border-color: $primary-light-color;
+  margin-right: 40px;
+  margin-bottom: 9px;
+  padding: 0;
+  background-image: none;
+
+  @media (min-width: $tablet-width) {
+    width: 88px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    width: 137px;
+  }
+}
+
+.price-container__input-min {
+  @include font($primary-font, 16px, 24px, $grey-color);
+  margin-top: 13px;
+}
+
+.price-container__input-max {
+  margin-right: 0;
+}
+
+.price-container__input:focus {
+  border-color: $primary-dark-color;
+}
+
+.price-container__input:active {
+  border-color: $primary-light-color;
+  color: $base-color;
+}
+
+.price-container__input:disabled {
+  border-color: $light-grey;
+}
+
+.price-container::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 2px;
+  background-color: $grey-color;
+  mask-image: url("../../icons/stack.svg#dash");
+  mask-size: 8px 2px;
+  mask-position: center top;
+  transform: translateX(137px) translateY(-50px);
+
+  @media (min-width: $tablet-width) {
+    transform: translateX(107px) translateY(-50px);
+  }
+
+
+  @media (min-width: $desktop-width) {
+    transform: translateX(154px) translateY(-50px);
+  }
+}
+
+.price-container {
+  @media (min-width: $tablet-width) {
+    max-width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 318px;
+  }
+}

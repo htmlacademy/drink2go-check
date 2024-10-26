@@ -1,0 +1,20 @@
+.logo__name-header {
+  margin: 12px 0 12px 20px;
+}
+
+.logo__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    @include font($primary-font, 14px, 20px, $base-color);
+    font-weight: 400;
+    display: block;
+    padding-top: 6px;
+  }
+}
+
+.logo__link-footer {
+  @media (min-width: $desktop-width) {
+    text-decoration: none;
+  }
+}

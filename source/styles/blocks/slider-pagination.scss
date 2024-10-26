@@ -1,0 +1,11 @@
+.slider-pagination__button {
+  width: 62px;
+  height: 4px;
+  border: none;
+  border-radius: 0;
+  background-color: $white-color;
+
+  &--current {
+    background-color: $base-color-lilac;
+  }
+}

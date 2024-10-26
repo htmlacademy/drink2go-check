@@ -1,0 +1,77 @@
+.user-list {
+  @include flex-between;
+}
+
+.user-list__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    font-family: $primary-font;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    padding: 32px 20px 32px 44px;
+  }
+}
+
+.user-list__icon {
+  position: relative;
+  color: $base-color;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $desktop-width) {
+    width: 112px;
+    height: 80px;
+
+    &--union {
+      width: 129px;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: $base-color-lilac;
+
+      &::before {
+        background-color: $base-color-lilac;
+      }
+    }
+
+    &:active {
+      background-color: $base-secondary-lilac;
+      color: $base-color-lilac;
+
+      &::before {
+        background-color: $base-color-lilac;
+      }
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    mask-repeat: no-repeat;
+    mask-position: 50% 50%;
+    mask-size: 16px 16px;
+    background-color: $base-color;
+
+    @media (min-width: $desktop-width) {
+      width: 112px;
+      height: 80px;
+      mask-position: 20px 32px;
+    }
+  }
+
+  &--login::before {
+    mask-image: url("../../icons/stack.svg#user-account");
+  }
+
+  &--union::before {
+    mask-image: url("../../icons/stack.svg#basket");
+  }
+}

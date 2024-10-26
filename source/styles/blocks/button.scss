@@ -1,0 +1,15 @@
+.button:hover {
+  background-color: $primary-light-color;
+}
+
+.button:focus-visible {
+  background-color: $primary-light-color;
+}
+
+.button:active {
+  background-color: $primary-dark-color;
+}
+
+.button:disabled {
+  background-color: $grey-color;
+}

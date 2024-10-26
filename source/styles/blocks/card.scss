@@ -1,0 +1,119 @@
+.card {
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px 28px;
+    margin: 0;
+    width: 349px;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.card:focus {
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+.card__ling-img {
+  display: block;
+}
+
+.card__link-img:hover {
+  opacity: 0.5;
+}
+
+.card__link-img:focus-visible {
+  opacity: 0.5;
+}
+
+.card__link-img:active {
+  opacity: 0.3;
+}
+
+.card__link-name {
+  text-decoration: none;
+  text-align: left;
+}
+
+.card__title {
+  @include font($primary-font, 18px, 32px, $base-color);
+  font-weight: 700;
+  margin: 20px 0 4px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 24px, 36px, $base-color);
+    font-weight: 700;
+    margin-top: 27px;
+    margin-bottom: 10px;
+    width: 289px;
+  }
+}
+
+.card__info {
+  @include font($primary-font, 14px, 20px, $base-color);
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: left;
+  width: 238px;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    margin-bottom: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 30px;
+  }
+}
+
+.card__info-br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.card__shoping {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 240px;
+
+  @media (min-width: $tablet-width) {
+    gap: 99px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 67px;
+  }
+}
+
+.card__price {
+  @include font($primary-font, 20px, 32px, $base-color);
+  font-weight: 600;
+  align-self: center;
+  max-width: 70px;
+}
+
+.card__basket-button {
+  @include font($primary-font, 14px, 20px, $white-color);
+  font-weight: 400;
+  min-width: 141px;
+  min-height: 36px;
+  background-color: $base-color-lilac;
+  border-radius: 4px;
+  text-decoration: none;
+  padding-top: 8px;
+  padding-left: 25px;
+  background-image: url("../../icons/stack.svg#basket-card-button");
+  background-repeat: no-repeat;
+  background-size: 20px 16px;
+  background-position: 20px;
+}

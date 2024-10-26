@@ -1,0 +1,262 @@
+.features {
+  width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+  }
+}
+
+.features__intro {
+  @include font($primary-font, 12px, 16px, $base-color-lilac);
+  margin: 50px 0 4px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 60px;
+    padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 100px;
+    padding: 0;
+  }
+}
+
+.features__title {
+  @include font($primary-font, 24px, 36px, $base-color);
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  text-align: center;
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 42px, 64px, $base-color);
+    font-weight: 700;
+    max-width: 700px;
+    margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 80px;
+    max-width: 1000px;
+  }
+}
+
+.features__item {
+  @media (min-width: $tablet-width) {
+    width: 339px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 318px;
+    height: 170px;
+  }
+}
+
+.features__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 728px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 30px;
+    text-align: left;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1362px;
+    gap: 30px;
+  }
+}
+
+.features__info {
+  @include font($primary-font, 18px, 32px, $base-color);
+  font-weight: 700;
+  padding-top: 66px;
+  display: block;
+  background-size: 52px 56px;
+  background-position: center top;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 24px, 36px, $base-color);
+    font-weight: 700;
+    margin: 0;
+    padding: 0 10px 10px 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.features__info--speed {
+  background-image: url("../../icons/stack.svg#features-clock");
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  margin-bottom: 4px;
+  padding-right: 47px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding-left: 71px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 70px;
+    padding-top: 5px;
+  }
+}
+
+.features__info--convenience {
+  background-image: url("../../icons/stack.svg#features-fit");
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding-left: 71px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 70px;
+    padding-top: 5px;
+  }
+}
+
+.features__info--cheerfulness {
+  background-image: url("../../icons/stack.svg#features-energy");
+  background-repeat: no-repeat;
+  margin-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding-left: 71px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 70px;
+    padding-top: 5px;
+  }
+}
+
+.features__info--ecology {
+  background-image: url("../../icons/stack.svg#features-eco");
+  background-repeat: no-repeat;
+  margin-bottom: 3px;
+
+  @media (min-width: $tablet-width) {
+    background-image: none;
+    padding-left: 71px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 70px;
+    padding-top: 5px;
+  }
+}
+
+.features__text {
+  @include font($primary-font, 14px, 20px, $base-color);
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 24px, $base-color);
+    margin-bottom: 0;
+    padding-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    text-align: center;
+    padding-top: 10px;
+  }
+}
+
+.features__list:last-child {
+  margin-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 119px;
+  }
+}
+
+.features__container {
+  @media (min-width: $tablet-width) {
+    display: block;
+    background-size: 52px 56px;
+    background-position: left top;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-position: center top;
+    padding-top: 72px;
+  }
+}
+
+.features__container--speed {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../icons/stack.svg#features-clock");
+    background-repeat: no-repeat;
+  }
+}
+
+.features__container--convenience {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../icons/stack.svg#features-fit");
+    background-repeat: no-repeat;
+  }
+}
+
+.features__container--cheerfulness {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../icons/stack.svg#features-energy");
+    background-repeat: no-repeat;
+  }
+}
+
+.features__container--ecology {
+  @media (min-width: $tablet-width) {
+    background-image: url("../../icons/stack.svg#features-eco");
+    background-repeat: no-repeat;
+  }
+}
+
+.features__text--width {
+  padding-left: 24px;
+  padding-right: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 0;
+    padding-left: 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 284px;
+    padding-left: 28px;
+  }
+}

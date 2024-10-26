@@ -1,0 +1,94 @@
+.form__intro {
+  @include font($primary-font, 12px, 16px, $base-color-lilac);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 50px 50px 4px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 80px 80px 4px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 101px 90px 4px;
+  }
+}
+
+.form__title {
+  @include font($primary-font, 24px, 36px, $base-color);
+  font-weight: 700;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 42px, 64px, $base-color);
+    font-weight: 700;
+    max-width: 728px;
+    margin-bottom: 20px;
+    margin-left: 27px;
+  }
+
+
+  @media (min-width: $desktop-width) {
+    margin-left: 317px;
+  }
+}
+
+.form__container {
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    max-width: 768px;
+    gap: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    max-width: 318px;
+    margin: 0;
+  }
+}
+
+.form {
+  @media (min-width: $desktop-width) {
+    max-width: 1360;
+    margin: 0 auto;
+    display: grid;
+    grid-template:
+      "text text" 180px
+      "form select" 714px
+      "form card" 1fr
+      / 318px 1fr;
+  }
+}
+
+.form__intro-grid {
+  @media (min-width: $desktop-width) {
+    grid-area: text;
+  }
+}
+
+.form__appointment {
+  @media (min-width: $desktop-width) {
+    grid-area: form;
+  }
+}
+
+.form__grid {
+  @media (min-width: $desktop-width) {
+    grid-area: select;
+  }
+}
+
+.form__grid-card {
+  @media (min-width: $desktop-width) {
+    grid-area: card;
+    margin-top: -615px;
+    width: 1026px;
+    margin-left: 15px;
+  }
+}
