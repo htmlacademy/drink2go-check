@@ -1,0 +1,14 @@
+.button-burger {
+  padding: 30px;
+}
+
+.button-burger--closed {
+  background-image: url("../../icons/stack.svg#burger");
+  background-size: 16px 16px;
+}
+
+@media (min-width: 768px) {
+  .button-burger {
+    display: none;
+  }
+}
