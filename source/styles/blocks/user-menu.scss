@@ -1,0 +1,78 @@
+.user-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-menu__button {
+  background-color: var(--bg-primary, #ffffff);
+  cursor: pointer;
+  height: 16px;
+  border: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var(--bg-condition, #000080);
+  }
+}
+
+.user-menu__button--personal {
+  padding: 30px;
+  background-image: url("../../icons/stack.svg#user");
+  background-size: 16px 16px;
+}
+
+.user-menu__button--basket {
+  padding: 30px;
+  background-image: url("../../icons/stack.svg#basket");
+  background-size: 16px 16px;
+}
+
+.user-menu .user-menu__description {
+  text-transform: uppercase;
+  color: var(--color-base, #444444);
+  font-family: var(--font-base, "Verdana");
+  font-size: 12px;
+  line-height: 1.33;
+  font-weight: 500;
+}
+
+@media (max-width: 1439px) {
+  .user-menu__description {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .user-menu__button--personal,
+  .user-menu__button--basket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    padding: 32px 20px;
+    background-image: none;
+  }
+
+  .user-menu__button--personal::before,
+  .user-menu__button--basket::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: relative;
+  }
+
+  .user-menu__button--personal::before {
+    background-image: url("../../icons/stack.svg#user");
+    background-size: 16px 16px;
+  }
+
+  .user-menu__button--basket::before {
+    background-image: url("../../icons/stack.svg#basket");
+    background-size: 16px 16px;
+  }
+}

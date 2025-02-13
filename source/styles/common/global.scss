@@ -1,1 +1,12 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+
+body {
+  font-family: var(--font-base, inherit);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  margin: 0;
+  width: 100%;
+  background-color: var(--bg-primary, #ffffff);
+  color: var(--color-base, #333333);
+}
