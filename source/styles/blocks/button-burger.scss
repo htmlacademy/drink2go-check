@@ -2,13 +2,18 @@
   padding: 30px;
 }
 
+@media (min-width: 768px) {
+  .button-burger {
+    display: none;
+  }
+}
+
 .button-burger--closed {
   background-image: url("../../icons/stack.svg#burger");
   background-size: 16px 16px;
 }
 
-@media (min-width: 768px) {
-  .button-burger {
-    display: none;
-  }
+.button-burger--opened {
+  background-image: url("../../icons/stack.svg#open-menu");
+  background-size: 16px 16px;
 }

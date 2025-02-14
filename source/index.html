@@ -14,17 +14,17 @@
   <div class="body__wrapper">
     <header class="body__header header" data-test="header">
       <div class="header__wrapper">
-          <a class="header__logo logo" href="index.html">
-            <picture>
-              <source media="(min-width: 1440px)" width="170" height="36" type="image/svg+xml"
-                srcset="images/logo-footer-tablet.svg">
-              <source media="(min-width: 768px)" width="82" height="36" type="image/svg+xml"
-                srcset="images/logo-footer-mobile.svg">
-              <img src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип сайта Drink2Go">
-            </picture>
-            <span class="header__logo-text">Интернет-магазин<br>кофейных напитков</span>
-          </a>
-        <nav class="header__nav header__nav--closed nav">
+        <a class="header__logo logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" width="170" height="36" type="image/svg+xml"
+              srcset="images/logo-footer-tablet.svg">
+            <source media="(min-width: 768px)" width="82" height="36" type="image/svg+xml"
+              srcset="images/logo-footer-mobile.svg">
+            <img src="./images/logo-mobile.svg" width="32" height="36" alt="Логотип сайта Drink2Go">
+          </picture>
+          <span class="header__logo-text">Интернет-магазин<br>кофейных напитков</span>
+        </a>
+        <nav class="header__nav nav nav--closed">
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
               <a class="nav__link nav__link--current" href="index.html">Главная</a>
@@ -56,7 +56,109 @@
       </div>
     </header>
     <main class="body__main main">
-      <h1>Страница для старта</h1>
+      <h1 class="visually-hidden">Кофейные напитки Drink2Go - выбери свой!</h1>
+      <section class="main__slider slider" data-test="hero">
+        <button class="slider__button slider__button--prev" type="button">
+          <span class="visually-hidden">Показать предыдущий товар</span>
+        </button>
+        <div class="main__sliders sliders">
+          <div class="sliders__card card card--current" data-bg="flat">
+            <a class="card__link" href="#">
+              <picture>
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
+                  srcset="images/slider-flat-desktop@1x.webp 1x, images/slider-flat-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/webp"
+                  srcset="images/slider-flat-tablet@1x.webp 1x, images/slider-flat-tablet@2x.webp 2x">
+                <source width="280" height="280" type="image/webp"
+                  srcset="images/slider-flat-mobile@1x.webp 1x, images/slider-flat-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/png"
+                  srcset="images/slider-flat-desktop@1x.png 1x, images/slider-flat-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/png"
+                  srcset="images/slider-flat-tablet@1x.png 1x, images/slider-flat-tablet@2x.png 2x">
+                <img src="images/slider-flat-mobile@1x.png" srcset="images/slider-flat-mobile@2x.png 2x" width="280"
+                  height="280" alt="Кофе Декаф Флэт Уайт">
+              </picture>
+            </a>
+            <span class="card__badge">Новинка!</span>
+            <h2 class="card__title">Декаф Флэт Уайт</h2>
+            <p class="card__description">Свежесваренный кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком —
+              то, что нужно для&nbsp;расслабления после тяжёлого рабочего дня</p>
+            <div class="card__price">
+              <del class="card__price-old">295₽</del>
+              <ins class="card__price-new">225₽</ins>
+              <button class="card__price-button" type="button">Заказать</button>
+            </div>
+          </div>
+          <!-- <div class="sliders__card card" data-bg="latte">
+            <a class="card__link" href="#">
+              <picture>
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
+                  srcset="images/slider-latte-desktop@1x.webp 1x, images/slider-latte-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/webp"
+                  srcset="images/slider-latte-tablet@1x.webp 1x, images/slider-latte-tablet@2x.webp 2x">
+                <source width="280" height="280" type="image/webp"
+                  srcset="images/slider-latte-mobile@1x.webp 1x, images/slider-latte-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/png"
+                  srcset="images/slider-latte-desktop@1x.png 1x, images/slider-latte-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/png"
+                  srcset="images/slider-latte-tablet@1x.png 1x, images/slider-latte-tablet@2x.png 2x">
+                <img src="images/slider-latte-mobile@1x.png" srcset="images/slider-latte-mobile@2x.png 2x" width="280"
+                  height="280" alt="Кофе Декаф Флэт Уайт">
+              </picture>
+            </a>
+            <span class="card__badge">Новинка!</span>
+            <h2 class="card__title">Лавандовый Латте</h2>
+            <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+              лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="card__price">
+              <del class="card__price-old">285₽</del>
+              <ins class="card__price-new">265₽</ins>
+              <button class="card__price-button" type="button">Заказать</button>
+            </div>
+          </div>
+          <div class="sliders__card card" data-bg="espresso">
+            <a class="card__link" href="#">
+              <picture>
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/webp"
+                  srcset="images/slider-espresso-desktop@1x.webp 1x, images/slider-espresso-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/webp"
+                  srcset="images/slider-espresso-tablet@1x.webp 1x, images/slider-espresso-tablet@2x.webp 2x">
+                <source width="280" height="280" type="image/webp"
+                  srcset="images/slider-espresso-mobile@1x.webp 1x, images/slider-espresso-mobile@2x.webp 2x">
+                <source media="(min-width: 1440px)" width="600" height="600" type="image/png"
+                  srcset="images/slider-espresso-desktop@1x.png 1x, images/slider-espresso-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" width="476" height="476" type="image/png"
+                  srcset="images/slider-espresso-tablet@1x.png 1x, images/slider-espresso-tablet@2x.png 2x">
+                <img src="images/slider-espresso-mobile@1x.png" srcset="images/slider-espresso-mobile@2x.png 2x"
+                  width="280" height="280" alt="Кофе Декаф Флэт Уайт">
+              </picture>
+            </a>
+            <span class="card__badge">Новинка!</span>
+            <h2 class="card__title">Тройной Эспрессо</h2>
+            <p class="card__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и
+              лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="card__price">
+              <del class="card__price-old">395₽</del>
+              <ins class="card__price-new">375₽</ins>
+              <button class="card__price-button" type="button">Заказать</button>
+            </div>
+          </div> -->
+        </div>
+        <button class="slider__button slider__button--next" type="button">
+          <span class="visually-hidden">Показать следующий товар</span>
+        </button>
+        <div class="slider__buttons-step">
+          <button class="slider__button-step" type="button">
+            <span class="visually-hidden">Показать первый товар</span>
+          </button>
+          <button class="slider__button-step" type="button">
+            <span class="visually-hidden">Показать следующий товар</span>
+          </button>
+          <button class="slider__button-step" type="button">
+            <span class="visually-hidden">Показать последний товар</span>
+          </button>
+        </div>
+      </section>
     </main>
     <footer class="body__footer">FOOTER</footer>
   </div>
