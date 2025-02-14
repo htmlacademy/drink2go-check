@@ -1,0 +1,81 @@
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 8px;
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social__title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  color: $basic-primary;
+}
+
+.social__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic-text-color;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1.3s;
+  letter-spacing: 0.2px;
+
+  &:hover,
+  &:active {
+    &::before {
+      background-color: $basic-primary;
+    }
+  }
+}
+
+.social__link--vk {
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../../icons/stack.svg#icon-vk");
+    mask-size: 20px 20px;
+    mask-repeat: no-repeat;
+    background-color: $basic-grey;
+  }
+}
+
+.social__link--pinterest {
+  &::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    mask-image: url("../../icons/stack.svg#icon-pinterest");
+    mask-size: 22px 22px;
+    mask-repeat: no-repeat;
+    background-color: $basic-grey;
+  }
+}
+
+.social__link--ok {
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    mask-image: url("../../icons/stack.svg#icon-ok");
+    mask-size: 20px 20px;
+    mask-repeat: no-repeat;
+    background-color: $basic-grey;
+  }
+}

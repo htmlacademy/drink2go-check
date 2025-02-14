@@ -1,0 +1,66 @@
+.drink-slider {
+  .noui-connects {
+    height: 4px;
+    background: $basic-grey-lighter;
+    border: 1px solid $basic-white;
+
+    box-shadow: none;
+  }
+
+  .noui-connect {
+    height: 4px;
+    background: $basic-primary-lighter;
+    border: 2px solid $basic-primary-lighter;
+  }
+
+  .noui-handle {
+    top: -10px;
+    width: 24px;
+    height: 24px;
+    cursor: default;
+    background: $basic-white;
+    border: 2px solid $basic-primary-lighter;
+    border-radius: 50%;
+    box-shadow: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    &:hover {
+      &::after {
+        display: block;
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+        background: $basic-primary-lightest;
+        border-radius: 50%;
+      }
+    }
+
+    &:active {
+      &::after {
+        display: block;
+        top: 2px;
+        left: 2px;
+        width: 16px;
+        height: 16px;
+        background: $basic-primary;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .noui-handle-upper {
+    right: -5px;
+  }
+}
+
+.noui-target {
+  height: 4px;
+  border: 1px solid $basic-white;
+  border-radius: 0;
+  box-shadow: none;
+}
