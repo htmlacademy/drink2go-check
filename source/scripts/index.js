@@ -87,7 +87,6 @@ if(rangeSlider) {
   noUiSlider.create(rangeSlider, {
     start: [0, 900],
     connect: true,
-    // padding: 15,
     step: 1,
     range: {
       'min': [0],
