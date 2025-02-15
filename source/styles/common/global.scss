@@ -10,3 +10,7 @@ body {
   background-color: var(--bg-primary, #ffffff);
   color: var(--color-base, #333333);
 }
+
+img {
+  object-fit: contain;
+}

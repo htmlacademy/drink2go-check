@@ -22,6 +22,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .card__badge {
@@ -57,14 +58,15 @@
   gap: 6px;
 }
 
-.card__price-old,
-.card__price-new {
+.card__price-old {
   font-size: 16px;
   line-height: 2;
+  color: var(--bg-accent, #000080);
 }
 
-.card__price-old {
-  color: var(--bg-accent, #000080);
+.card__price-new {
+  font-size: 20px;
+  line-height: 1.6;
 }
 
 .card__price-new {
@@ -117,13 +119,9 @@
     align-self: flex-start;
   }
 
-  .card__price-new {
-    font-size: 20px;
-    line-height: 1.6;
-  }
-
   .card__link {
     grid-row: 6 / 7;
+    margin: 0;
   }
 }
 
@@ -137,6 +135,7 @@
   .card__link {
     grid-column: 1 / 2;
     grid-row: 2 / 8;
+    margin: 0;
   }
 
   .card__badge {
