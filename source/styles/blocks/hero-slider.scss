@@ -5,6 +5,14 @@
 .hero-slide {
   position: relative;
   display: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 197px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .hero-slide-1 {
@@ -29,11 +37,10 @@
   align-items: center;
   gap: 7px;
   width: 100%;
-  padding-bottom: 60px;
+  padding-bottom: 45px;
 
   @media (min-width: $tablet-width) {
     flex-direction: column-reverse;
-    margin-bottom: 197px;
     padding-bottom: 300px;
   }
 
@@ -93,9 +100,7 @@
 
   @media (min-width: $desktop-width) {
     align-items: start;
-    padding-inline: 11px;
-    padding-bottom: 182px;
-    padding-top: 179px;
+    padding: 179px 11px 182px;
   }
 }
 
@@ -127,10 +132,14 @@
     font-size: 56px;
     line-height: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .slide-text {
-  margin: 0 0 17px;
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -138,6 +147,7 @@
 
   @media (min-width: $tablet-width) {
     max-width: 575px;
+    margin: 0 0 17px;
     font-size: 20px;
     line-height: 32px;
   }
@@ -182,6 +192,10 @@
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .slide-button {

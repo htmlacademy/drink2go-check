@@ -3,11 +3,14 @@
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
+    max-width: 808px;
     grid-template-columns: 253px 252px 263px;
     justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1520px;
     grid-template-columns: 25% 25% 24% 26%;
   }
 }
@@ -21,7 +24,7 @@
 
   @media (min-width: $tablet-width) {
     grid-area: 1 / 1 / 1 / 4;
-    padding: 41px 20px 8px;
+    padding: 43px 20px 8px;
     border-bottom: none;
   }
 

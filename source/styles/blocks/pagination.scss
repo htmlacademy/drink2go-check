@@ -70,6 +70,13 @@
   }
 }
 
+.pagination__link-prev {
+  @media (min-width: $tablet-width) {
+    min-width: 92px;
+  }
+}
+
+
 .pagination__link-next {
   transform: rotate(180deg);
 

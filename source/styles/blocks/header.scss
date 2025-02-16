@@ -7,12 +7,15 @@
   border-bottom: 1px solid $basic-secondary;
 
   @media (min-width: $tablet-width) {
+    width: 100%;
+    max-width: 808px;
     flex-direction: row;
     align-items: start;
     border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1520px;
     padding-inline: 40px;
   }
 }

@@ -38,8 +38,8 @@
 }
 
 .filter-legend-price {
-  padding-top: 17px;
-  padding-bottom: 14px;
+  margin-bottom: 13px;
+  padding-block: 17px 14px;
 
   @media (min-width: $tablet-width) {
     padding-top: 5px;
@@ -47,8 +47,7 @@
 }
 
 .filter-legend-power {
-  padding-top: 32px;
-  padding-bottom: 24px;
+  padding-block: 32px 24px;
 
   @media (min-width: $tablet-width) {
     padding-top: 5px;
@@ -56,8 +55,7 @@
 }
 
 .filter-legend-manufacturers {
-  padding-top: 17px;
-  padding-bottom: 18px;
+  padding-block: 17px 17px;
 
   @media (min-width: $tablet-width) {
     padding-top: 5px;
@@ -133,8 +131,7 @@
 .price-controls {
   display: flex;
   justify-content: space-between;
-  margin-top: 27px;
-  margin-bottom: 15px;
+  margin-block: 34px 15px;
 }
 
 .price-controls input {
@@ -339,4 +336,20 @@
 .button-reset {
   background-color: $basic-white;
   color: $basic-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-primary-lighter;
+    color: $basic-white;
+  }
+
+  &:active {
+    background-color: $basic-primary-dark;
+    color: $basic-white;
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+    color: $basic-white;
+  }
 }

@@ -7,7 +7,7 @@
   width: 100%;
   margin-right: -50%;
   background-color: $basic-white;
-  transform: translate(-50%, 24%);
+  transform: translate(-50%, 26%);
 
   @media (min-width: $tablet-width) {
     position: static;
@@ -106,8 +106,7 @@
 
 .menu-nav__link {
   width: 100%;
-  padding-top: 22px;
-  padding-bottom: 19px;
+  padding-block: 21px 19px;
   font-family: $font-montserrat;
   font-size: 12px;
   font-weight: 500;
