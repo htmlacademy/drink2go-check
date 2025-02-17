@@ -1,0 +1,118 @@
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 40px 0 auto;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    order: 1;
+    margin: 0 0 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 17px;
+  }
+}
+
+.menu__link {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  padding: 22px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 1.3s;
+  color: $basic-text-color;
+
+  &:active {
+    background-color: $basic-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      color: $basic-primary;
+    }
+
+    &:active {
+      background-color: $basic-secondary;
+      color: $basic-primary;
+    }
+  }
+}
+
+
+.menu__link--user {
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask-image: url("../../icons/stack.svg#icon-user");
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    background-color: $basic-text-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      &::before {
+        background-color: $basic-primary;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $basic-primary;
+      }
+    }
+  }
+}
+
+.menu__link--union {
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    mask-image: url("../../icons/stack.svg#icon-union");
+    mask-size: 16px 16px;
+    mask-repeat: no-repeat;
+    background-color: $basic-text-color;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover {
+      &::before {
+        background-color: $basic-primary;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $basic-primary;
+      }
+    }
+  }
+}
+
+.menu__text {
+  display: none;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

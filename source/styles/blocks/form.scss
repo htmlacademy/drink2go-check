@@ -1,0 +1,355 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    gap: 11px;
+  }
+}
+
+.filter-fieldset {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.filter-legend {
+  position: relative;
+  display: block;
+  padding-block: 16px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+  }
+}
+
+.filter-legend-price {
+  margin-bottom: 13px;
+  padding-block: 17px 14px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+  }
+}
+
+.filter-legend-power {
+  padding-block: 32px 24px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+  }
+}
+
+.filter-legend-manufacturers {
+  padding-block: 17px 17px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 5px;
+  }
+}
+
+.range-filter {
+  width: 100%;
+}
+
+.range-controls {
+  position: relative;
+  height: 42px;
+  width: 280px;
+  margin-bottom: 9px;
+  padding-top: 14px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 15px;
+  }
+}
+
+.range-controls .scale {
+  height: 2px;
+  width: 100%;
+  background-color: $basic-grey-lighter;
+}
+
+.range-controls .bar {
+  width: 89%;
+  height: 4px;
+  background-color: $basic-primary-lighter;
+}
+
+.bar {
+  width: 30%;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  background-color: $basic-white;
+  border: 2px solid $basic-primary-lighter;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.range-controls .toggle-min {
+  left: 0;
+}
+
+.range-controls .toggle-max {
+  left: 235px;
+
+  @media (min-width: $tablet-width) {
+    left: 179px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: 274px;
+  }
+}
+
+.price-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 34px 15px;
+}
+
+.price-controls input {
+  width: 118px;
+  height: 40px;
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: $basic-grey;
+  background-color: $basic-white;
+  border: 2px solid $basic-primary-lighter;
+  border-radius: 4px;
+
+  &:focus {
+    border: 2px solid $basic-primary-dark;
+  }
+
+  &:default {
+    border: 2px solid $basic-grey-lighter;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 86px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+  }
+}
+
+.price-controls .max-price input {
+  color: $basic-text-color;
+}
+
+.hyphen {
+  height: 2px;
+  width: 8px;
+  margin: auto;
+  background-color: $basic-grey;
+}
+
+.filter-checkbox-input {
+  display: none;
+}
+
+.filter-checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 24px;
+  margin-bottom: 21px;
+  font-size: 16px;
+  line-height: 24px;
+
+  &::before {
+    position: relative;
+    content: "";
+    left: 0;
+    display: block;
+    width: 42px;
+    height: 24px;
+    background-color: $basic-grey;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: $basic-white;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      background-color: $basic-primary-lightest;
+      border: 2px solid $basic-primary-lighter;
+    }
+  }
+
+  &:disabled {
+    color: $basic-grey;
+
+    &::before {
+      background-color: $basic-grey-lighter;
+    }
+
+    &::after {
+      background-color: $basic-grey;
+    }
+  }
+}
+
+.filter-checkbox-label:last-child {
+  margin-bottom: 28px;
+  color: $basic-grey;
+
+  &::before {
+    background-color: $basic-grey-lighter;
+  }
+}
+
+.filter-checkbox-input:checked + .filter-checkbox-label {
+  &::before {
+    background-color: $basic-primary;
+  }
+
+  &::after {
+    top: 2px;
+    left: 20px;
+  }
+}
+
+.filter-radio-input {
+  display: none;
+}
+
+.filter-radio-label {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 19px;
+  padding-left: 35px;
+  font-size: 16px;
+  line-height: 24px;
+  background-image: url("../../images/icon-radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+
+  &:hover {
+    background-image: url("../../images/icon-radio-hover.svg");
+  }
+}
+
+.filter-radio-label:last-child {
+  margin-bottom: 12px;
+  background-image: url("../../images/icon-radio-off-last-child.svg");
+  color: $basic-grey;
+}
+
+.filter-radio-input:checked + .filter-radio-label {
+  background-image: url("../../images/icon-radio-on.svg");
+}
+
+.filter-submit-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    gap: 20px;
+    max-width: 277px;
+    margin-top: 10px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 100%;
+    margin-inline: 0;
+  }
+}
+
+.filter-submit {
+  width: 100%;
+  background-color: $basic-primary;
+  border: none;
+}
+
+.filter-submit:nth-child(1) {
+  @media (min-width: $tablet-width) {
+    width: 137px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.filter-submit:nth-child(2) {
+  @media (min-width: $tablet-width) {
+    width: 120px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
+.button-reset {
+  background-color: $basic-white;
+  color: $basic-primary;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-primary-lighter;
+    color: $basic-white;
+  }
+
+  &:active {
+    background-color: $basic-primary-dark;
+    color: $basic-white;
+  }
+
+  &:disabled {
+    background-color: $basic-grey;
+    color: $basic-white;
+  }
+}

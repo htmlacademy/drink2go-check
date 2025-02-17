@@ -1,0 +1,148 @@
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0 auto;
+  padding-block: 48px 64px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 50px 84px;
+    padding-inline: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 100px 119px;
+    padding-inline: 40px;
+  }
+}
+
+.features__title {
+  order: 2;
+  margin: 0 auto 29px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto 48px;
+    font-size: 42px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto 73px;
+  }
+}
+
+.features__text {
+  order: 1;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: $basic-primary;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.features__list {
+  order: 3;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: center;
+  gap: 33px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 29px;
+  }
+}
+
+.features__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 141px;
+  padding: 0 23px;
+  background-repeat: no-repeat;
+  background-size: 52px 56px;
+  background-position: top 1px center;
+
+  @media (min-width: $tablet-width) {
+    align-items: flex-start;
+    padding: 0 9px 0 72px;
+    background-position: top 10px left;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: center;
+    padding: 0 3px;
+    background-position: top 1px center;
+  }
+}
+
+.features__item--watch {
+  background-image: url("../../icons/icon-watch.svg");
+}
+
+.features__item--pocket {
+  background-image: url("../../icons/icon-pocket.svg");
+}
+
+.features__item--energy {
+  background-image: url("../../icons/icon-energy.svg");
+}
+
+.features__item--leaf {
+  background-image: url("../../icons/icon-leaf.svg");
+}
+
+.features__heading {
+  margin: 0;
+  padding: 67px 15px 7px;
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 7px 0 11px;
+    text-align: left;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 77px 15px 11px;
+    text-align: center;
+  }
+}
+
+.features__item-text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: center;
+  }
+}
