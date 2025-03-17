@@ -1,1 +1,0 @@
-var e=document.querySelector(".header__nav-wrapper"),a=document.querySelector(".header__burger-btn");a&&e&&a.addEventListener("click",()=>{e.classList.toggle("header__nav-wrapper--closed"),e.classList.toggle("header__nav--opened"),a.classList.toggle("js-toggle-button")});
