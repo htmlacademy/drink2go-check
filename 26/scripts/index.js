@@ -1,0 +1,1 @@
+var e=document.querySelector(".header__button-wrapper"),t=document.querySelector(".header__toggle");e.classList.remove("header__button-nojs");t.addEventListener("click",function(){e.classList.toggle("header__button-closed"),e.classList.toggle("header__button-opened")});
